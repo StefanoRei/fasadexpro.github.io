@@ -160,6 +160,7 @@ u{
     font-family: 'Circe Regular';
     color: var(--text-color);
     padding: 2rem 0;
+    overflow-x: hidden;
 }
 
 .image-section {
@@ -198,11 +199,14 @@ u{
 }
 
 /* Base Table Styles */
+
+.table-section{
+    padding: 1rem;
+}
+
 .custom-table {
     display: table;
-    width: 100%;
     border-collapse: collapse;
-    padding: 1rem;
 }
 
 .table-header-row,
@@ -551,7 +555,9 @@ footer {
     align-items: center;
     width: 100%;
 }
-
+.footer-content{
+    padding: 1rem;
+}
 
 @media (max-width: 950px) {
     
@@ -665,12 +671,6 @@ footer {
     .paragraph {
         font-size: 1em;
         padding: 0 1rem;
-    }
-    
-    
-    footer {
-        flex-direction: column;
-        height: auto;
     }
     
     .header-left, 

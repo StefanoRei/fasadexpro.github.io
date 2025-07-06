@@ -1,0 +1,298 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script>
+        const projectsData = [
+            {
+                "id": 1,
+                "title": "Здание второй сцены Государственного академического Мариинского театра",
+                "image": "images/Frame_18.png",
+                "link": "projects/gamp2"
+            },
+            {
+                "id": 2,
+                "title": "Завод ООО «Сименс Технологии Газовых Турбин»",
+                "image": "images/Frame_19.png",
+                "link": "projects/simens"
+            },
+            {
+                "id": 3,
+                "title": "Международный аэропорт «Курумоч», 1-я очередь развития.",
+                "image": "images/Frame_20.png",
+                "link": "projects/kurumoch"
+            },
+            {
+                "id": 4,
+                "title": "«Технопарк» Сколково (здания 3a, 3b, 3c)",
+                "image": "images/Frame_22.png",
+                "link": "projects/technopark"
+            },
+            {
+                "id": 5,
+                "title": "Здание Научно- технического центра «Трубной металлургической компании»",
+                "image": "images/Frame_23.png",
+                "link": "projects/tmk"
+            },
+            {
+                "id": 6,
+                "title": "Гостиничный комплекс Mövenpick",
+                "image": "images/Frame_24.png",
+                "link": "projects/mvenpick"
+            },
+            {
+                "id": 7,
+                "title": `ЖК "Новочеремушкинская, 17"`,
+                "image": "images/Frame_25.png",
+                "link": "projects/cheryomushki"
+            },
+            {
+                "id": 8,
+                "title": "Жилой комплекс AQUATORIA корп. В1, С1, В3",
+                "image": "images/Frame_26.png",
+                "link": "projects/aquatoria"
+            },
+            {
+                "id": 9,
+                "title": "Международный центр самбо, центр бокса на территории Олимпийского комплекса «Лужники»",
+                "image": "images/Frame_27.png",
+                "link": "projects/sambo"
+            },
+            {
+                "id": 10,
+                "title": "Здание аппарата управления ПК «Шесхарис»",
+                "image": "images/Frame_28.png",
+                "link": "projects/sheskharis"
+            },
+            {
+                "id": 11,
+                "title": "Бизнес-центр WORKKI",
+                "image": "images/Frame_29.png",
+                "link": "projects/workki"
+            },
+            {
+                "id": 12,
+                "title": "Жилой комплекс «LEVEL Причальный»",
+                "image": "images/Frame_30.png",
+                "link": "projects/level"
+            },
+            {
+                "id": 13,
+                "title": `Музейно-выставочный центр "Коллекция"`,
+                "image": "images/Frame_31.png",
+                "link": "projects/collection"
+            },
+            {
+                "id": 14,
+                "title": "Жилой комплекс «Victory Park Residences» (6, 7 и 8 корпуса)",
+                "image": "images/Frame_32.png",
+                "link": "projects/victoryparkresidences"
+            },
+            {
+                "id": 15,
+                "title": "ЖК NOW, Урбан блок 2 и 4",
+                "image": "images/Frame_33.png",
+                "link": "projects/now"
+            },
+            {
+                "id": 16,
+                "title": "Гостиничный комплекс Radisson",
+                "image": "images/Frame_34.png",
+                "link": "projects/radisson"
+            },
+            {
+                "id": 17,
+                "title": "Многофункциональный общественно-деловой и торгово- развлекательный комплекс с апарт- отелем в составе ТПУ «Ботанический сад»",
+                "image": "images/Frame_36.png",
+                "link": "projects/botanicgarden"
+            },
+            {
+                "id": 18,
+                "title": "Иннополис Технопарк корпуса Б-1, В",
+                "image": "images/Frame_37.png",
+                "link": "projects/innopolis"
+            },
+            {
+                "id": 19,
+                "title": "Бизнес-центр Taller",
+                "image": "images/Frame_38.png",
+                "link": "projects/taller"
+            }
+        ]; 
+
+        const servicesData = [
+            {
+                "id": 1,
+                "title": "Профессиональное консультирование по фасадным решениям",
+                "description": "Наша команда экспертов предлагает комплексное сопровождение на всех этапах проекта: от концепции до реализации. Мы адаптируем уровень вовлеченности под ваши задачи, гарантируя эффективное использование ресурсов и соблюдение сроков.",
+                "link": "services/kons"
+            },
+            {
+                "id": 2,
+                "title": "Профессиональное проектирование фасадов",
+                "description": "Наша команда специалистов обеспечивает полный цикл проектирования — от концепции до рабочей документации. Мы гарантируем качество, соблюдение сроков и эффективное использование ресурсов.",
+                "link": "services/proekt"
+            },
+            {
+                "id": 3,
+                "title": "Управление проектами возведения фасадов",
+                "description": "Мы обеспечиваем комплексное управление строительством фасадов – от проектирования до ввода в эксплуатацию. Наша задача – четкая координация всех участников процесса для минимизации рисков и соблюдения сроков.",
+                "link": "services/uprav"
+            },
+            {
+                "id": 4,
+                "title": "Оптимизация фасадных решений на стадии проектирования",
+                "description": "Мы проводим комплексный анализ фасадных систем на ранних этапах, чтобы минимизировать затраты и избежать дорогостоящих изменений в процессе строительства. Наши решения обеспечивают оптимальное сочетание стоимости, надежности и эстетики.",
+                "link": "services/optimizacia"
+            },
+            {
+                "id": 5,
+                "title": "Профессиональная разработка конструкторской документации для фасадов",
+                "description": "ы создаем полный комплект рабочей документации (ОПР, КМ, КМД) для фасадных систем любой сложности. Наши решения гарантируют точность реализации проекта без переделок и превышения бюджета.",
+                "link": "services/razrabotka"
+            }
+        ];
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+
+        <div class="header-left">
+            <nav>
+                <ul>
+                    <li><a href="#pro">Проекты</a></li>
+                    <li><a href="#usl">Услуги</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-logo">
+            <img class="logo" src="images/logo.png" />
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="#komp">О компании</a></li>
+                    <li><a href="#kont">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <nav>
+            <ul>
+                <li><a href="#pro">Проекты</a></li>
+                <li><a href="#usl">Услуги</a></li>
+                <li><a href="#komp">О компании</a></li>
+                <li><a href="#kont">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        });
+    </script>
+
+    <main>
+        <section class="content" id="pro">
+            <h1 class="title">Проекты</h1>
+            <div class="projects-container">
+            </div>
+        </section>
+        <section class="content" id="usl">
+            <h1 class="title">Услуги</h1>
+            <div class="services-container">
+            </div>
+        </section>
+        <section class="content" id="komp">
+            <h1 class="title">О компании</h1>
+            <div class="divider"></div>
+            <p class="paragraph">
+                ФЭП – ваш надежный партнер в создании современных фасадных решений
+                <br>
+                <br>
+                Мы – команда высококвалифицированных специалистов в области проектирования и реализации фасадных систем.
+                Несмотря на относительно недавнее появление на рынке, мы обладаем солидным профессиональным опытом и
+                используем передовые технологии в создании современных фасадных решений. Наша работа базируется на трех
+                фундаментальных принципах: глубокой технической экспертизе, индивидуальном подходе к каждому проекту и
+                полной ответственности за конечный результат. Мы тщательно анализируем все аспекты будущего фасада - от
+                архитектурной концепции до технико-экономических показателей, предлагая оптимальные решения,
+                соответствующие самым строгим требованиям качества и надежности. Особое внимание уделяем детальной
+                проработке всех этапов проекта, что позволяет нам гарантировать безупречное исполнение и долговечность
+                реализованных фасадных систем. Наши специалисты постоянно отслеживают новые тенденции в отрасли, внедряя
+                инновационные материалы и технологии, что в сочетании с проверенными временем методиками работы дает
+                возможность создавать действительно уникальные фасадные решения. Мы гордимся тем, что каждый наш проект
+                - это гармоничное сочетание эстетики, функциональности и экономической эффективности, воплощенное в
+                металле, стекле и современных композитных материалах.
+            </p>
+        </section>
+    </main>
+
+    <footer id="kont">
+        <div class="header-left">Наши Контакты</div>
+        <div class="header-right">
+            <a href="https://t.me/age_evaa" target="_blank" rel="nofollow noopener" aria-label="telegram"
+                style="width: 30px; height: 30px">
+                <svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z"
+                        fill="#ffffff"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+    <script src="js/header.js"></script>
+    <script>
+        function loadProjects() {
+            const container = document.querySelector('.projects-container');
+            container.innerHTML = projectsData.map(project => `
+                <a href="${project.link}" class="project-card">
+                    <img src="${project.image}" alt="${project.title}" />
+                    <div class="project-overlay">
+                        <h3>${project.title}</h3>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        function loadServices() {
+            const container = document.querySelector('.services-container');
+            container.innerHTML = servicesData.map(service => `
+                <a href="${service.link}" class="service-card">
+                    <h3>${service.title}</h3>
+                    <p>${service.description}</p>
+                    <div class="service-more">
+                        <span>Подробнее</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadProjects();
+            loadServices();
+        });
+
+    </script>
+</body>
+
+</html>

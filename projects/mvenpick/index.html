@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гостиничный комплекс Mövenpick</title>
+    <link rel="stylesheet" href="../css/project.css" />
+</head>
+
+<body>
+    <header>
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+        <div class="header-left">
+            <nav>
+                <ul>
+                    <li><a href="../../#pro">Проекты</a></li>
+                    <li><a href="../../#usl">Услуги</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-logo">
+            <img class="logo" src="../../images/logo.png" />
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="../../#komp">О компании</a></li>
+                    <li><a href="../../#kont">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        });
+    </script>
+
+    <div class="mobile-menu">
+        <nav>
+            <ul>
+                <li><a href="../../#pro">Проекты</a></li>
+                <li><a href="../../#usl">Услуги</a></li>
+                <li><a href="../../#komp">О компании</a></li>
+                <li><a href="../../#kont">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="content">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h3 class="uptitle"></h3>
+                    <h1 class="title">Гостиничный комплекс Mövenpick</h1>
+                    <h3 class="subtitle"></h3>
+                    <p class="paragraph">
+                        Гостиничный комплекс Mövenpick в Москве расположен в историческом центре города. Это современный 5-звездочный отель на 224 номера, включая люксы и апартаменты. В инфраструктуру входят 3 ресторана, конференц-залы общей площадью 1000 м², спа-центр с бассейном и фитнес-зоной. Особенностью отеля стали панорамные окна с видом на центр Москвы и швейцарские традиции сервиса.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img src="images\main.png">
+                </div>
+            </div>
+        </section>
+        <section class="table-section">
+            <div class="custom-table">
+                <!-- Header Row -->
+                <div class="table-header-row">
+                    <div class="table-cell">
+                        <p class="table-title">Описание работ</p>
+                    </div>
+                    <div class="table-cell"><strong>Генпроектировщик</strong><div class="table-divider"></div></div>
+                    <div class="table-cell"><strong>Заказчик/Генподрядчик</strong><div class="table-divider"></div></div>
+                </div>
+                
+                
+                <!-- Data Row -->
+                <div class="table-data-row">
+                    <div class="table-cell">
+                        <p>
+                            Наши сотрудники принимали участие в инжиниринге проекта, выполнили проектирование фасадных систем, включившее светопрозрачные конструкции из алюминиевой системы Schüco (фасадное остекление, окна и входные группы) общей площадью 900 м², а также осуществила устройство современного вентилируемого фасада с облицовкой из керамического гранита Surface Laboratory by Kerama Marazzi площадью 3000 м².
+                        </p>
+                    </div>
+                    <div class="table-cell">
+                        <p>АМ «ГРАН» (Мастерская Павла Андреева)</p>
+                    </div>
+                    <div class="table-cell">
+                        <p>
+                           ООО «Динас»/СК "МИРАЙ"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="image-section">
+            <div class="image-list">
+                <img src="images\image_1.png">
+<img src="images\image_2.png">
+            </div>
+        </section>
+    </main>
+
+    <footer id="kont">
+        <div class="header-left">Наши Контакты</div>
+        <div class="header-right">
+            <a href="https://t.me/age_evaa" target="_blank" rel="nofollow noopener" aria-label="telegram"
+                style="width: 30px; height: 30px">
+                <svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z"
+                        fill="#ffffff"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -104,11 +104,17 @@
             </div>
         </section>
         <section class="image-section">
-            <div class="image-list">
-                <img src="images\image_1.png">
+            <div class="image-gallery">
+                <img src="images/image_1.png" onclick="enlargeImage(this)">
             </div>
         </section>
     </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="enlargedImage">
+    </div>
+    <script src="../../js/gallery.js"></script>
 
     <footer id="kont">
         <div class="footer-content">Наши Контакты</div>

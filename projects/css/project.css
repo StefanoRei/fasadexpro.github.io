@@ -1,7 +1,60 @@
 @import url(../../css/main.css);
 
+body {
+    transform: scale(1); /* Вернуть исходный масштаб */
+    transform-origin: top left; /* Устанавливает точку отсчета для масштабирования */
+    width: 100%; /* Установите ширину на 100% */
+    overflow-x: hidden; /* Скрывает горизонтальную прокрутку */
+}
+
+header {
+    background-color: rgb(92, 123, 138,1); /* Темно-синий цвет */
+    height: 75px; /* Высота панели */
+    display: flex; /* Используйте flexbox для выравнивания элементов */
+    align-items: center; /* Центрирование элементов по вертикали */
+    padding: 0 1rem; /* Отступы по бокам */
+    position: fixed; /* Фиксированное положение */
+    top: 0; /* Прикрепить к верхней части страницы */
+    left: 0; /* Прикрепить к левой части страницы */
+    right: 0; /* Прикрепить к правой части страницы */
+    z-index: 1000; /* Убедитесь, что панель выше других элементов */
+    color: white; /* Цвет текста на панели */
+    font-weight: 400; /* Установите менее жирный текст */
+    font-size: 14px; /* Уменьшите размер шрифта */
+}
+
+.header-logo {
+    margin: 0 auto; /* Центрирование логотипа */
+}
+
+.header-logo img {
+    max-height: 80px; /* Установите высоту логотипа на 80 пикселей */
+    width: auto; /* Автоматическая ширина для сохранения пропорций */
+    filter: invert(1); /* Инвертирование цвета логотипа */
+    margin-top: -5px; /* Поднимите логотип на 5 пикселей выше */
+}
+
+nav a {
+    color: white; /* Цвет ссылок в навигации */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 15px; /* Увеличьте отступы между ссылками */
+    font-weight: 400; /* Установите менее жирный текст для ссылок */
+    padding: 10px; /* Добавьте отступы вокруг ссылок */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: rgb(172, 135, 66);
+}
+
+main {
+    margin-top: -0px; /* Установите отступ сверху для основного контента, чтобы он начинался на 30 пикселей выше */
+    padding: 20px 0; /* Добавьте 20 пикселей отступа сверху и снизу для основного контента */
+}
+
 .content {
     text-align: left;
+    font-size: 14px; /* Уменьшите размер шрифта для основного текста */
 }
 
 .uptitle {
@@ -12,12 +65,14 @@
 .title {
     font-weight: 800;
     font-family: "Circe Bold";
+    font-size: 16px; /* Уменьшите размер шрифта для заголовков */
 }
 
 .subtitle {
     font-weight: 600;
     margin-bottom: 2em;
     color: var(--card-title-color);
+    font-size: 14px; /* Уменьшите размер шрифта для подзаголовков */
 }
 
 .content-wrapper {
@@ -31,7 +86,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 1rem; /* Увеличен отступ */
+    padding-left: 30px; /* Увеличьте отступ слева для текста */
+    padding-right: 30px; /* Увеличьте отступ справа для текста */
 }
 
 .image-content {
@@ -41,16 +98,16 @@
     display: flex; 
     padding: 0 0.5rem;
     justify-content: center;
+    overflow: hidden; /* Добавлено для предотвращения выхода изображения за пределы контейнера */
 }
 
 .image-content img {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* Изменено на auto для сохранения пропорций */
+    object-fit: cover; /* Сохраняет пропорции и заполняет контейнер */
     border-radius: 4px;
+    max-height: 400px; /* Увеличьте максимальную высоту изображения */
 }
-
 
 .image-gallery {
     display: grid;
@@ -116,7 +173,6 @@ body.modal-open {
 .close:hover {
     color: #ccc;
 }
-
 
 @media (max-width: 768px) {
     .content-wrapper {

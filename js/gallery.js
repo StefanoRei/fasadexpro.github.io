@@ -1,43 +1,24 @@
 function enlargeImage(img) {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("enlargedImage");
-    
-    modal.style.display = "block";
-    modalImg.src = img.src;
+    modal.style.display = "block"; // Показываем модальное окно
+    modalImg.src = img.src; // Устанавливаем источник изображения
+    document.body.classList.add('modal-open'); // Блокируем прокрутку
 
-    const scrollY = window.scrollY;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = '100%';
-    
-    modal.onclick = function() {
-        closeModal()
-    }
-    
-    modalImg.onclick = function(e) {
-        e.stopPropagation();
-    }
+    // Центрируем изображение относительно текущей позиции прокрутки
+    const scrollY = window.scrollY || window.pageYOffset; // Получаем текущее положение прокрутки
+    modalImg.style.top = `${scrollY + window.innerHeight / 2}px`; // Устанавливаем верхнюю позицию
 }
 
-function closeModal() {
+// Закрытие модального окна по клику на любом месте
+document.getElementById("imageModal").onclick = function() {
+    this.style.display = "none"; // Скрываем модальное окно
+    document.body.classList.remove('modal-open'); // Разблокируем прокрутку
+};
 
-    const scrollY = document.body.style.top;
-
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
-
-    document.getElementById("imageModal").style.display = "none";
-}
-
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
-        closeModal();
-    }
-});
-
-document.getElementById("closeModal").addEventListener("click", function(event) {
-    closeModal();
-    event.stopPropagation();
-})
+// Закрытие модального окна по клику на кнопку закрытия
+document.getElementById("closeModal").onclick = function(event) {
+    event.stopPropagation(); // Останавливаем всплытие события
+    document.getElementById("imageModal").style.display = "none"; // Скрываем модальное окно
+    document.body.classList.remove('modal-open'); // Разблокируем прокрутку
+};

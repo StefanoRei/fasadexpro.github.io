@@ -137,28 +137,30 @@ body.modal-open {
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1000; /* Поверх всех элементов */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow: auto;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон */
+    overflow: auto; /* Прокрутка при необходимости */
 }
 
 .modal-content {
-    display: block;
-    margin: auto;
-    max-width: 90%;
-    max-height: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
+    display: block; /* Отображение изображения */
+    max-width: 90%; /* Максимальная ширина */
+    max-height: 90%; /* Максимальная высота */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвиг для центрирования */
 }
+
+
+
+
 
 .close {
     position: absolute;

@@ -34,7 +34,7 @@ header {
     margin-top: -5px; /* Поднимите логотип на 5 пикселей выше */
 }
 
-nav a {
+header nav a {
     color: white; /* Цвет ссылок в навигации */
     text-decoration: none; /* Убираем подчеркивание */
     margin: 0 15px; /* Увеличьте отступы между ссылками */
@@ -42,7 +42,7 @@ nav a {
     padding: 10px; /* Добавьте отступы вокруг ссылок */
 }
 
-nav a:hover {
+header nav a:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
     color: rgb(172, 135, 66);
 }

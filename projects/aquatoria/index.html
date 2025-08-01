@@ -24,7 +24,7 @@
 
         /* Отступ для основного контента */
         main {
-            margin-top: 80px;
+            margin-top: 20px; /* Уменьшил отступ сверху */
         }
 
         /* Стили для галереи */
@@ -44,7 +44,7 @@
             gap: 15px;
         }
         
-        .image-gallery img {
+        .image-gallery img, .image-content img {
             width: 100%;
             height: auto;
             display: block;
@@ -56,13 +56,13 @@
             transform: translateY(20px);
         }
         
-        .image-gallery img.loaded {
+        .image-gallery img.loaded, .image-content img.loaded {
             opacity: 1;
             transform: translateY(0);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
         
-        .image-gallery img:hover {
+        .image-gallery img:hover, .image-content img:hover {
             transform: scale(1.02);
         }
 
@@ -126,6 +126,13 @@
             overflow: hidden;
         }
         
+        /* Центрирование логотипа */
+        .header-logo {
+            position: absolute;
+            left: 47.5%;
+            transform: translateX(-50%);
+        }
+        
         /* Адаптивность */
         @media (max-width: 900px) {
             .image-gallery-column {
@@ -141,6 +148,9 @@
                 top: 20px;
                 right: 20px;
                 font-size: 30px;
+            }
+            main {
+                margin-top: -10px; /* Еще меньше отступ на мобильных */
             }
         }
     </style>
@@ -164,7 +174,7 @@
         </div>
 
         <div class="header-logo">
-            <img class="logo" src="../../images/logo.png" alt="Логотип" />
+            <a href="../../index.html"><img class="logo" src="../../images/logo.png" alt="Логотип" /></a>
         </div>
 
         <div class="header-right">
@@ -200,7 +210,7 @@
                     </p>
                 </div>
                 <div class="image-content">
-                    <img src="images/main.jpg" alt="Жилой комплекс AQUATORIA">
+                    <img src="images/main.jpg" loading="lazy" alt="Жилой комплекс AQUATORIA" onclick="enlargeImage(this)">
                 </div>
             </div>
         </section>
@@ -438,7 +448,7 @@
 
         // Предзагрузка изображений
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.image-gallery img');
+            const images = document.querySelectorAll('.image-gallery img, .image-content img');
             images.forEach(img => {
                 const imgObj = new Image();
                 imgObj.src = img.src;

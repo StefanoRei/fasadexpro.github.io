@@ -35,6 +35,53 @@
             z-index: 1001;
         }
 
+        /* Стили для уменьшения расстояния между годами и заголовком */
+        .uptitle {
+            margin-bottom: 5px; /* Уменьшаем отступ снизу */
+            font-size: 16px;
+            color: #666;
+        }
+
+        .title {
+            margin-top: 5px; /* Уменьшаем отступ сверху */
+        }
+
+        /* Стили для защиты изображений */
+        .image-protection {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .image-protection::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .image-gallery img, .image-content img {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+            pointer-events: auto; /* Разрешаем события для наведения */
+        }
+
+        /* Разрешаем pointer-events для кликов */
+        .image-gallery .image-protection,
+        .image-content .image-protection {
+            pointer-events: auto;
+        }
 
         /* Стили для галереи */
         .image-gallery {
@@ -109,6 +156,10 @@
             cursor: grab;
             user-select: none;
             transform-origin: center center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         
         .modal-content.grabbing {
@@ -162,6 +213,21 @@
                 margin-top: -10px; /* Еще меньше отступ на мобильных */
             }
         }
+
+        /* Сообщение при попытке сохранить изображение */
+        #saveMessage {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 3000;
+            display: none;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -211,7 +277,7 @@
         <section class="content">
             <div class="content-wrapper">
                 <div class="text-content">
-                    <h3 class="uptitle"></h3>
+                    <h3 class="uptitle">2023-2024</h3>
                     <h1 class="title">Многофункциональный комплекс с апарт-отелем в составе ТПУ «Ботанический сад»</h1>
                     <h3 class="subtitle"></h3>
                     <p class="paragraph">
@@ -219,7 +285,9 @@
                     </p>
                 </div>
                 <div class="image-content">
-                    <img src="images/main.jpg" loading="lazy" alt="Многофункциональный комплекс с апарт-отелем" onclick="enlargeImage(this)">
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/main.jpg" loading="lazy" alt="Многофункциональный комплекс с апарт-отелем">
+                    </div>
                 </div>
             </div>
         </section>
@@ -253,20 +321,40 @@
         <section class="image-section">
             <div class="image-gallery">
                 <div class="image-gallery-column">
-                    <img src="images/image_ (1).jpg" loading="lazy" alt="Фото проекта 1" onclick="enlargeImage(this)">
-                    <img src="images/image_ (4).jpg" loading="lazy" alt="Фото проекта 1" onclick="enlargeImage(this)">
-                    <img src="images/image_ (7).jpg" loading="lazy" alt="Фото проекта 1" onclick="enlargeImage(this)">
-                    <img src="images/image_ (10).jpg" loading="lazy" alt="Фото проекта 1" onclick="enlargeImage(this)">
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (1).jpg" loading="lazy" alt="Фото проекта 1">
+                    </div>
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (4).jpg" loading="lazy" alt="Фото проекта 2">
+                    </div>
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (7).jpg" loading="lazy" alt="Фото проекта 2">
+                    </div>
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (10).jpg" loading="lazy" alt="Фото проекта 2">
+                    </div>
                 </div>
                 <div class="image-gallery-column">
-                    <img src="images/image_ (2).jpg" loading="lazy" alt="Фото проекта 2" onclick="enlargeImage(this)">
-                    <img src="images/image_ (5).jpg" loading="lazy" alt="Фото проекта 1" onclick="enlargeImage(this)">
-                    <img src="images/image_ (8).jpg" loading="lazy" alt="Фото проекта 1" onclick="enlargeImage(this)">
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (2).jpg" loading="lazy" alt="Фото проекта 3">
+                    </div>
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (5).jpg" loading="lazy" alt="Фото проекта 2">
+                    </div>
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (8).jpg" loading="lazy" alt="Фото проекта 2">
+                    </div>
                 </div>
                 <div class="image-gallery-column">
-                    <img src="images/image_ (3).jpg" loading="lazy" alt="Фото проекта 2" onclick="enlargeImage(this)">
-                    <img src="images/image_ (6).jpg" loading="lazy" alt="Фото проекта 1" onclick="enlargeImage(this)">
-                    <img src="images/image_ (9).jpg" loading="lazy" alt="Фото проекта 1" onclick="enlargeImage(this)">
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (3).jpg" loading="lazy" alt="Фото проекта 1">
+                    </div>
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (6).jpg" loading="lazy" alt="Фото проекта 2">
+                    </div>
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img src="images/image_ (9).jpg" loading="lazy" alt="Фото проекта 2">
+                    </div>
                 </div>
             </div>
         </section>
@@ -277,6 +365,8 @@
         <img class="modal-content" id="enlargedImage" alt="Увеличенное изображение">
     </div>
 
+    <div id="saveMessage">Сохранение изображений запрещено</div>
+
     <footer id="kont">
         <div class="footer-content">Наши Контакты</div>
         <div class="footer-content">
@@ -285,7 +375,7 @@
                 <svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z"
+                        d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.160.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.400-2.546.705-4.485.767-5.362Z"
                         fill="#ffffff"></path>
                 </svg>
             </a>
@@ -293,6 +383,41 @@
     </footer>
 
     <script>
+        // Защита от скачивания изображений - только правая кнопка
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                showSaveMessage();
+                return false;
+            }
+        });
+
+        // Запрет перетаскивания изображений
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Защита от клавиш Print Screen и других
+        document.addEventListener('keydown', function(e) {
+            // Print Screen, Ctrl+P, Ctrl+S
+            if (e.key === 'PrintScreen' || (e.ctrlKey && (e.key === 'p' || e.key === 's'))) {
+                e.preventDefault();
+                showSaveMessage();
+                return false;
+            }
+        });
+
+        function showSaveMessage() {
+            const message = document.getElementById('saveMessage');
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 2000);
+        }
+
         // Мобильное меню
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             this.classList.toggle('active');
@@ -365,6 +490,9 @@
 
         // Начало взаимодействия
         document.getElementById("enlargedImage").addEventListener('mousedown', function(e) {
+            // Разрешаем только левую кнопку мыши
+            if (e.button !== 0) return;
+            
             clickStartTime = Date.now();
             clickStartX = e.clientX;
             clickStartY = e.clientY;

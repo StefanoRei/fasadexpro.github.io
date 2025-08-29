@@ -5,121 +5,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+        /* Стили для кнопки вакансий */
+        .vacancies-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .vacancy-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 18px 40px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-radius: 50px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            max-width: 280px;
+        }
+        
+        .vacancy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            background-color: #34495e;
+        }
+        
+        .vacancy-btn span {
+            transition: transform 0.4s ease;
+        }
+        
+        .vacancy-btn .arrow {
+            margin-left: 12px;
+            transition: transform 0.4s ease;
+            transform: translateX(0);
+        }
+        
+        .vacancy-btn:hover .arrow {
+            transform: translateX(5px);
+        }
+    </style>
     <script>
         const projectsData = [
             {
-                "id": 1,
-                "title": "Здание второй сцены Государственного академического Мариинского театра",
-                "image": "images/Frame_18.webp",
-                "link": "projects/gamp2"
-            },
-            {
-                "id": 2,
-                "title": "Завод ООО «Сименс Технологии Газовых Турбин»",
-                "image": "images/Frame_19.webp",
-                "link": "projects/simens"
-            },
-            {
-                "id": 3,
-                "title": "Международный аэропорт «Курумоч», 1-я очередь развития.",
-                "image": "images/Frame_20.webp",
-                "link": "projects/kurumoch"
-            },
-            {
-                "id": 4,
-                "title": "«Технопарк» Сколково (здания 3a, 3b, 3c)",
-                "image": "images/Frame_22.webp",
-                "link": "projects/technopark"
-            },
-            {
-                "id": 5,
-                "title": "Здание Научно- технического центра «Трубной металлургической компании»",
-                "image": "images/Frame_23.webp",
-                "link": "projects/tmk"
-            },
-            {
-                "id": 6,
-                "title": "Гостиничный комплекс Mövenpick",
-                "image": "images/Frame_24.webp",
-                "link": "projects/mvenpick"
-            },
-            {
-                "id": 7,
-                "title": `ЖК "Новочеремушкинская, 17"`,
-                "image": "images/Frame_25.webp",
-                "link": "projects/cheryomushki"
-            },
-            {
-                "id": 8,
-                "title": "Жилой комплекс AQUATORIA корп. В1, С1, В3",
-                "image": "images/Frame_26.webp",
-                "link": "projects/aquatoria"
-            },
-            {
-                "id": 9,
-                "title": "Международный центр самбо, центр бокса на территории Олимпийского комплекса «Лужники»",
-                "image": "images/Frame_27.webp",
-                "link": "projects/sambo"
-            },
-            {
-                "id": 10,
-                "title": "Здание аппарата управления ПК «Шесхарис»",
-                "image": "images/Frame_28.webp",
-                "link": "projects/sheskharis"
-            },
-            {
-                "id": 11,
-                "title": "Бизнес-центр WORKKI",
-                "image": "images/Frame_29.webp",
-                "link": "projects/workki"
-            },
-            {
-                "id": 12,
-                "title": "Жилой комплекс «LEVEL Причальный»",
-                "image": "images/Frame_30.webp",
-                "link": "projects/level"
-            },
-            {
-                "id": 13,
-                "title": `Музейно-выставочный центр "Коллекция"`,
-                "image": "images/Frame_31.webp",
-                "link": "projects/collection"
-            },
-            {
-                "id": 14,
-                "title": "Жилой комплекс «Victory Park Residences» (6, 7 и 8 корпуса)",
-                "image": "images/Frame_32.webp",
-                "link": "projects/victoryparkresidences"
-            },
-            {
-                "id": 15,
-                "title": "ЖК NOW, Урбан блок 2 и 4",
-                "image": "images/Frame_33.webp",
-                "link": "projects/now"
-            },
-            {
-                "id": 16,
-                "title": "Гостиничный комплекс Radisson",
-                "image": "images/Frame_34.webp",
-                "link": "projects/radisson"
+                "id": 19,
+                "title": "Бизнес-центр Taller",
+                "image": "images/Frame_38.webp",
+                "link": "projects/taller",
+                "endYear": 2024
             },
             {
                 "id": 17,
                 "title": "Многофункциональный общественно-деловой и торгово- развлекательный комплекс с апарт- отелем в составе ТПУ «Ботанический сад»",
                 "image": "images/Frame_36.webp",
-                "link": "projects/botanicgarden"
+                "link": "projects/botanicgarden",
+                "endYear": 2024
+            },
+            {
+                "id": 13,
+                "title": `Музейно-выставочный центр "Коллекция"`,
+                "image": "images/Frame_31.webp",
+                "link": "projects/collection",
+                "endYear": 2024
+            },
+            {
+                "id": 8,
+                "title": "Жилой комплекс AQUATORIA корп. В1, С1, В3",
+                "image": "images/Frame_26.webp",
+                "link": "projects/aquatoria",
+                "endYear": 2024
             },
             {
                 "id": 18,
                 "title": "Иннополис Технопарк корпуса Б-1, В",
                 "image": "images/Frame_37.webp",
-                "link": "projects/innopolis"
+                "link": "projects/innopolis",
+                "endYear": 2024
             },
             {
-                "id": 19,
-                "title": "Бизнес-центр Taller",
-                "image": "images/Frame_38.webp",
-                "link": "projects/taller"
+                "id": 14,
+                "title": "Жилой комплекс «Victory Park Residences» (6, 7 и 8 корпуса)",
+                "image": "images/Frame_32.webp",
+                "link": "projects/victoryparkresidences",
+                "endYear": 2024
+            },
+            {
+                "id": 12,
+                "title": "Жилой комплекс «LEVEL Причальный»",
+                "image": "images/Frame_30.webp",
+                "link": "projects/level",
+                "endYear": 2023
+            },
+            {
+                "id": 16,
+                "title": "Гостиничный комплекс Radisson",
+                "image": "images/Frame_34.webp",
+                "link": "projects/radisson",
+                "endYear": 2022
+            },
+            {
+                "id": 9,
+                "title": "Международный центр самбо, центр бокса на территории Олимпийского комплекса «Лужники»",
+                "image": "images/Frame_27.webp",
+                "link": "projects/sambo",
+                "endYear": 2022
+            },
+            {
+                "id": 10,
+                "title": "Здание аппарата управления ПК «Шесхарис»",
+                "image": "images/Frame_28.webp",
+                "link": "projects/sheskharis",
+                "endYear": 2022
+            },
+            {
+                "id": 11,
+                "title": "Бизнес-центр WORKKI",
+                "image": "images/Frame_29.webp",
+                "link": "projects/workki",
+                "endYear": 2022
+            },
+            {
+                "id": 15,
+                "title": "ЖК NOW, Урбан блок 2 и 4",
+                "image": "images/Frame_33.webp",
+                "link": "projects/now",
+                "endYear": 2022
+            },
+            {
+                "id": 7,
+                "title": `ЖК "Новочеремушкинская, 17"`,
+                "image": "images/Frame_25.webp",
+                "link": "projects/cheryomushki",
+                "endYear": 2021
+            },
+            {
+                "id": 6,
+                "title": "Гостиничный комплекс Mövenpick",
+                "image": "images/Frame_24.webp",
+                "link": "projects/mvenpick",
+                "endYear": 2019
+            },
+            {
+                "id": 5,
+                "title": "Здание Научно- технического центра «Трубной металлургической компании»",
+                "image": "images/Frame_23.webp",
+                "link": "projects/tmk",
+                "endYear": 2019
+            },
+            {
+                "id": 4,
+                "title": "«Технопарк» Сколково (здания 3a, 3b, 3c)",
+                "image": "images/Frame_22.webp",
+                "link": "projects/technopark",
+                "endYear": 2016
+            },
+            {
+                "id": 2,
+                "title": "Завод ООО «Сименс Технологии Газовых Турбин»",
+                "image": "images/Frame_19.webp",
+                "link": "projects/simens",
+                "endYear": 2015
+            },
+            {
+                "id": 3,
+                "title": "Международный аэропорт «Курумоч», 1-я очередь развития.",
+                "image": "images/Frame_20.webp",
+                "link": "projects/kurumoch",
+                "endYear": 2015
+            },
+            {
+                "id": 1,
+                "title": "Здание второй сцены Государственного академического Мариинского театра",
+                "image": "images/Frame_18.webp",
+                "link": "projects/gamp2",
+                "endYear": 2013
             }
         ]; 
 
@@ -151,7 +217,7 @@
             {
                 "id": 5,
                 "title": "Профессиональная разработка конструкторской документации для фасадов",
-                "description": "Мы создаем полный комплект рабочей документации (ОПР, КМ, КМД) для фасадных систем любой сложности. Наши решения гарантируют точность реализации проекта без переделок и превышения бюджета.",
+                "description": "Мы создаем полный комплект рабочной документации (ОПР, КМ, КМД) для фасадных систем любой сложности. Наши решения гарантируют точность реализации проекта без переделок и превышения бюджета.",
                 "link": "services/razrabotka"
             }
         ];
@@ -239,6 +305,16 @@
                 - это гармоничное сочетание эстетики, функциональности и экономической эффективности, воплощенное в
                 металле, стекле и современных композитных материалах.
             </p>
+            
+            <!-- Кнопка Вакансии -->
+            <div class="vacancies-section">
+                <a href="vacancies\vacancies.html" class="vacancy-btn">
+                    <span>Вакансии</span>
+                    <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
         </section>
     </main>
 
@@ -250,7 +326,7 @@
                 <svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z"
+                        d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.400-2.546.705-4.485.767-5.362Z"
                         fill="#ffffff"></path>
                 </svg>
             </a>

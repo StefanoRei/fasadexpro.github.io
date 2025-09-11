@@ -227,7 +227,7 @@
                     </p>
                 </div>
                 <div class="image-content">
-                    <img src="images/main_final.webp" loading="lazy" alt="Бизнес-центр Taller" onclick="enlargeImage(this)">
+                    <img data-img-name="main.webp" loading="lazy" alt="Бизнес-центр Taller" onclick="enlargeImage(this)">
                 </div>
             </div>
         </section>
@@ -261,21 +261,21 @@
         <section class="image-section">
             <div class="image-gallery">
                 <div class="image-gallery-column">
-                    <img src="images/image_ (1)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 1" onclick="enlargeImage(this)">
-                    <img src="images/image_ (4)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 4" onclick="enlargeImage(this)">
-                    <img src="images/image_ (8)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 8" onclick="enlargeImage(this)">
-                    <img src="images/image_ (11)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 11" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (1).webp" loading="lazy" alt="Фото бизнес-центра Taller 1" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (4).webp" loading="lazy" alt="Фото бизнес-центра Taller 4" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (8).webp" loading="lazy" alt="Фото бизнес-центра Taller 8" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (11).webp" loading="lazy" alt="Фото бизнес-центра Taller 11" onclick="enlargeImage(this)">
                 </div>
                 <div class="image-gallery-column">
-                    <img src="images/image_ (2)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 2" onclick="enlargeImage(this)">
-                    <img src="images/image_ (5)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 5" onclick="enlargeImage(this)">
-                    <img src="images/image_ (9)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 9" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (2).webp" loading="lazy" alt="Фото бизнес-центра Taller 2" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (5).webp" loading="lazy" alt="Фото бизнес-центра Taller 5" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (9).webp" loading="lazy" alt="Фото бизнес-центра Taller 9" onclick="enlargeImage(this)">
                 </div>
                 <div class="image-gallery-column">
-                    <img src="images/image_ (3)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 3" onclick="enlargeImage(this)">
-                    <img src="images/image_ (6)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 6" onclick="enlargeImage(this)">
-                    <img src="images/image_ (10)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 10" onclick="enlargeImage(this)">
-                    <img src="images/image_ (12)_final.webp" loading="lazy" alt="Фото бизнес-центра Taller 12" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (3).webp" loading="lazy" alt="Фото бизнес-центра Taller 3" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (6).webp" loading="lazy" alt="Фото бизнес-центра Taller 6" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (10).webp" loading="lazy" alt="Фото бизнес-центра Taller 10" onclick="enlargeImage(this)">
+                    <img data-img-name="image_ (12).webp" loading="lazy" alt="Фото бизнес-центра Taller 12" onclick="enlargeImage(this)">
                 
                 </div>
             </div>
@@ -302,6 +302,9 @@
         </div>
     </footer>
 
+
+    <script src="../../js/image-optimizer.js"></script>
+
     <script>
         // Мобильное меню
         document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -322,7 +325,7 @@
         function enlargeImage(img) {
             const modal = document.getElementById("imageModal");
             const modalImg = document.getElementById("enlargedImage");
-            modalImg.src = img.src;
+            modalImg.src = img.getAttribute("data-large-src");
             modal.classList.add('active');
             document.body.classList.add('modal-open');
             

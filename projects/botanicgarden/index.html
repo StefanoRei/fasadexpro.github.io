@@ -25,62 +25,23 @@
 
         /* Отступ для основного контента */
         main {
-            margin-top: 20px; /* Уменьшил отступ сверху */
+            margin-top: 20px;
         }
 
-        
         .menu-toggle {
             width: 40px;
             height: 18px;  
             z-index: 1001;
         }
-
-        /* Стили для уменьшения расстояния между годами и заголовком */
+        
+            /* Стили для уменьшения расстояния между годами и заголовком */
         .uptitle {
             margin-bottom: 5px; /* Уменьшаем отступ снизу */
             font-size: 16px;
             color: #666;
         }
-
-        .title {
+         .title {
             margin-top: 5px; /* Уменьшаем отступ сверху */
-        }
-
-        /* Стили для защиты изображений */
-        .image-protection {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            cursor: pointer;
-            overflow: hidden;
-            border-radius: 5px;
-        }
-
-        .image-protection::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .image-gallery img, .image-content img {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-touch-callout: none;
-            -webkit-tap-highlight-color: transparent;
-            pointer-events: auto; /* Разрешаем события для наведения */
-        }
-
-        /* Разрешаем pointer-events для кликов */
-        .image-gallery .image-protection,
-        .image-content .image-protection {
-            pointer-events: auto;
         }
 
         /* Стили для галереи */
@@ -156,10 +117,6 @@
             cursor: grab;
             user-select: none;
             transform-origin: center center;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
         }
         
         .modal-content.grabbing {
@@ -210,7 +167,7 @@
                 font-size: 30px;
             }
             main {
-                margin-top: -10px; /* Еще меньше отступ на мобильных */
+                margin-top: -10px;
             }
         }
 
@@ -286,7 +243,7 @@
                 </div>
                 <div class="image-content">
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/main_final.webp" loading="lazy" alt="Многофункциональный комплекс с апарт-отелем">
+                        <img data-img-name="main.webp" loading="lazy" alt="Многофункциональный комплекс с апарт-отелем">
                     </div>
                 </div>
             </div>
@@ -322,38 +279,38 @@
             <div class="image-gallery">
                 <div class="image-gallery-column">
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (1)_final.webp" loading="lazy" alt="Фото проекта 1">
+                        <img data-img-name="image_1.webp" loading="lazy" alt="Фото проекта 1">
                     </div>
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (4)_final.webp" loading="lazy" alt="Фото проекта 2">
+                        <img data-img-name="image_4.webp" loading="lazy" alt="Фото проекта 2">
                     </div>
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (7)_final.webp" loading="lazy" alt="Фото проекта 2">
+                        <img data-img-name="image_7.webp" loading="lazy" alt="Фото проекта 2">
                     </div>
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (10)_final.webp" loading="lazy" alt="Фото проекта 2">
-                    </div>
-                </div>
-                <div class="image-gallery-column">
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (2)_final.webp" loading="lazy" alt="Фото проекта 3">
-                    </div>
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (5)_final.webp" loading="lazy" alt="Фото проекта 2">
-                    </div>
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (8)_final.webp" loading="lazy" alt="Фото проекта 2">
+                        <img data-img-name="image_10.webp" loading="lazy" alt="Фото проекта 2">
                     </div>
                 </div>
                 <div class="image-gallery-column">
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (3)_final.webp" loading="lazy" alt="Фото проекта 1">
+                        <img data-img-name="image_2.webp" loading="lazy" alt="Фото проекта 3">
                     </div>
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (6)_final.webp" loading="lazy" alt="Фото проекта 2">
+                        <img data-img-name="image_5.webp" loading="lazy" alt="Фото проекта 2">
                     </div>
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img src="images/image_ (9)_final.webp" loading="lazy" alt="Фото проекта 2">
+                        <img data-img-name="image_8.webp" loading="lazy" alt="Фото проекта 2">
+                    </div>
+                </div>
+                <div class="image-gallery-column">
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img data-img-name="image_3.webp" loading="lazy" alt="Фото проекта 1">
+                    </div>
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img data-img-name="image_6.webp" loading="lazy" alt="Фото проекта 2">
+                    </div>
+                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                        <img data-img-name="image_9.webp" loading="lazy" alt="Фото проекта 2">
                     </div>
                 </div>
             </div>
@@ -382,221 +339,9 @@
         </div>
     </footer>
 
-    <script>
-        // Защита от скачивания изображений - только правая кнопка
-        document.addEventListener('contextmenu', function(e) {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
-                showSaveMessage();
-                return false;
-            }
-        });
-
-        // Запрет перетаскивания изображений
-        document.addEventListener('dragstart', function(e) {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        // Защита от клавиш Print Screen и других
-        document.addEventListener('keydown', function(e) {
-            // Print Screen, Ctrl+P, Ctrl+S
-            if (e.key === 'PrintScreen' || (e.ctrlKey && (e.key === 'p' || e.key === 's'))) {
-                e.preventDefault();
-                showSaveMessage();
-                return false;
-            }
-        });
-
-        function showSaveMessage() {
-            const message = document.getElementById('saveMessage');
-            message.style.display = 'block';
-            setTimeout(() => {
-                message.style.display = 'none';
-            }, 2000);
-        }
-
-        // Мобильное меню
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.mobile-menu').classList.toggle('active');
-        });
-
-        // Галерея изображений
-        let currentScale = 1;
-        let isDragging = false;
-        let startX, startY, translateX = 0, translateY = 0;
-        let clickStartTime = 0;
-        let clickStartX = 0;
-        let clickStartY = 0;
-        const CLICK_MAX_DISTANCE = 5;
-        const CLICK_MAX_DURATION = 200;
-
-        function enlargeImage(img) {
-            const modal = document.getElementById("imageModal");
-            const modalImg = document.getElementById("enlargedImage");
-            modalImg.src = img.src;
-            modal.classList.add('active');
-            document.body.classList.add('modal-open');
-            
-            // Сброс масштаба и позиции при открытии нового изображения
-            currentScale = 1;
-            translateX = 0;
-            translateY = 0;
-            updateImageTransform();
-        }
-
-        function closeImageModal() {
-            const modal = document.getElementById("imageModal");
-            modal.classList.remove('active');
-            document.body.classList.remove('modal-open');
-        }
-
-        function updateImageTransform() {
-            const modalImg = document.getElementById("enlargedImage");
-            modalImg.style.transform = `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) scale(${currentScale})`;
-        }
-
-        function handleZoom(e) {
-            e.stopPropagation();
-            
-            // Циклическое переключение между уровнями масштаба
-            if (currentScale === 1) {
-                currentScale = 2;
-            } else if (currentScale === 2) {
-                currentScale = 3;
-            } else {
-                currentScale = 1;
-                translateX = 0;
-                translateY = 0;
-            }
-            
-            updateImageTransform();
-        }
-
-        // Обработчики для модального окна
-        document.getElementById("closeModal").addEventListener('click', function(e) {
-            e.stopPropagation();
-            closeImageModal();
-        });
-
-        document.getElementById("imageModal").addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeImageModal();
-            }
-        });
-
-        // Начало взаимодействия
-        document.getElementById("enlargedImage").addEventListener('mousedown', function(e) {
-            // Разрешаем только левую кнопку мыши
-            if (e.button !== 0) return;
-            
-            clickStartTime = Date.now();
-            clickStartX = e.clientX;
-            clickStartY = e.clientY;
-            
-            e.preventDefault();
-            isDragging = true;
-            this.classList.add('grabbing');
-            startX = e.clientX - translateX;
-            startY = e.clientY - translateY;
-        });
-
-        document.getElementById("enlargedImage").addEventListener('touchstart', function(e) {
-            clickStartTime = Date.now();
-            clickStartX = e.touches[0].clientX;
-            clickStartY = e.touches[0].clientY;
-            
-            e.preventDefault();
-            isDragging = true;
-            this.classList.add('grabbing');
-            startX = e.touches[0].clientX - translateX;
-            startY = e.touches[0].clientY - translateY;
-        });
-
-        // Окончание взаимодействия
-        document.getElementById("enlargedImage").addEventListener('mouseup', function(e) {
-            const endX = e.clientX;
-            const endY = e.clientY;
-            
-            if (isDragging) {
-                const distance = Math.sqrt(
-                    Math.pow(endX - clickStartX, 2) + 
-                    Math.pow(endY - clickStartY, 2)
-                );
-                
-                // Если движение было небольшим и коротким - это клик
-                if (distance <= CLICK_MAX_DISTANCE && Date.now() - clickStartTime <= CLICK_MAX_DURATION) {
-                    handleZoom(e);
-                }
-                
-                isDragging = false;
-                this.classList.remove('grabbing');
-                return;
-            }
-        });
-
-        document.getElementById("enlargedImage").addEventListener('touchend', function(e) {
-            const endX = e.changedTouches[0].clientX;
-            const endY = e.changedTouches[0].clientY;
-            
-            if (isDragging) {
-                const distance = Math.sqrt(
-                    Math.pow(endX - clickStartX, 2) + 
-                    Math.pow(endY - clickStartY, 2)
-                );
-                
-                // Если движение было небольшим и коротким - это тап
-                if (distance <= CLICK_MAX_DISTANCE && Date.now() - clickStartTime <= CLICK_MAX_DURATION) {
-                    handleZoom(e);
-                }
-                
-                isDragging = false;
-                this.classList.remove('grabbing');
-                return;
-            }
-        });
-
-        // Перемещение изображения
-        document.addEventListener('mousemove', function(e) {
-            if (!isDragging) return;
-            
-            translateX = e.clientX - startX;
-            translateY = e.clientY - startY;
-            updateImageTransform();
-        });
-
-        document.addEventListener('touchmove', function(e) {
-            if (!isDragging) return;
-            
-            e.preventDefault();
-            translateX = e.touches[0].clientX - startX;
-            translateY = e.touches[0].clientY - startY;
-            updateImageTransform();
-        });
-
-        // Закрытие по ESC
-        document.addEventListener('keydown', function(e) {
-            if (e.key === "Escape" && document.getElementById("imageModal").classList.contains('active')) {
-                closeImageModal();
-            }
-        });
-
-        // Предзагрузка изображений
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.image-gallery img, .image-content img');
-            images.forEach(img => {
-                const imgObj = new Image();
-                imgObj.src = img.src;
-                imgObj.onload = function() {
-                    img.classList.add('loaded');
-                };
-                if (img.complete) img.classList.add('loaded');
-            });
-        });
-    </script>
+    <script src="../../js/privacy.js"></script>
+    <script src="../../js/image-optimizer.js"></script>
+    <script src="../js/project.js"></script>
 </body>
 
 </html>

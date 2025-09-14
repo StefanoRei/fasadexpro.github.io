@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Set attributes
         img.setAttribute('srcset', srcset);
+        img.setAttribute("sizes", "(max-width: 640px) 100vw, (max-width: 2048px) 640px, 1024px");
         img.setAttribute('data-large-src', `${basePath}/original/${imgName}`);
-        img.setAttribute('src', `${basePath}/${sizes[1]}/${imgName}`); // Default to 640px
+        img.setAttribute('src', `${basePath}/${sizes[1]}/${imgName}`); 
     });
 });

@@ -1,11 +1,10 @@
-@import url(../../css/main.min.css);
-
+@import url(../../css/main.css);
 
 header {
-    background-color: rgb(92, 123, 138,1);
-    height: 75px; 
+    background-color: rgb(92, 123, 138, 1);
+    height: 75px;
     z-index: 10;
-    font-weight: 400; 
+    font-weight: 400;
     font-size: 14px;
 }
 
@@ -80,8 +79,8 @@ main {
 .image-content {
     flex: 1;
     position: relative;
-    min-height: 300px; 
-    display: flex; 
+    min-height: 300px;
+    display: flex;
     padding: 0 0.5rem;
     justify-content: center;
     overflow: hidden; /* Добавлено для предотвращения выхода изображения за пределы контейнера */
@@ -96,21 +95,41 @@ main {
 }
 
 .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 15px;
-    padding: 15px;
+    padding: 20px;
     justify-content: center;
 }
 
 .image-gallery img {
-    border-radius: 15px;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    display: block;
     cursor: pointer;
-    transition: transform 0.3s;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    background: #f5f5f5;
+    background-image: none;
+    /* opacity: 0; */
+    transform: translateY(20px);
+    object-fit: cover;
 }
+.image-gallery img.loaded,
+.image-content img.loaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-gallery-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 
 .image-gallery img:hover {
     transform: scale(1.03);
@@ -123,16 +142,24 @@ body.modal-open {
 }
 
 .modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed; /* Фиксированное положение */
-    z-index: 1000; /* Поверх всех элементов */
+    display: none;
+    position: fixed;
+    z-index: 2000;
     left: 0;
     top: 0;
-    width: 100%; /* Полная ширина */
-    height: 100%; /* Полная высота */
-    background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон */
-    overflow: auto; /* Прокрутка при необходимости */
-}
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    touch-action: none;
+  }
+
+.modal.active {
+    display: block;
+    opacity: 1;
+  }
 
 .modal-content {
     display: block; /* Отображение изображения */
@@ -143,10 +170,6 @@ body.modal-open {
     left: 50%; /* Центрирование по горизонтали */
     transform: translate(-50%, -50%); /* Сдвиг для центрирования */
 }
-
-
-
-
 
 .close {
     position: absolute;
@@ -164,19 +187,19 @@ body.modal-open {
 
 @media (max-width: 768px) {
     .content-wrapper {
-        flex-direction: column; 
+        flex-direction: column;
     }
-    
+
     .image-content {
-        order: 2; 
-        min-height: 200px; 
+        order: 2;
+        min-height: 200px;
     }
-    
+
     .text-content {
-        order: 1; 
+        order: 1;
     }
-    
+
     .image-content img {
-        position: relative; 
+        position: relative;
     }
 }

@@ -8,21 +8,21 @@
     <div class="header-left">
         <nav>
             <ul>
-                <li><a href="#pro">Проекты</a></li>
-                <li><a href="#usl">Услуги</a></li>
+                <li><a href="{{ '/' | relative_url }}#pro">Проекты</a></li>
+                <li><a href="{{ '/' | relative_url }}#usl">Услуги</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="header-logo">
-        <img class="logo" src="images/logo_final.webp" />
+        <a href="{{ '/' | relative_url }}"><img class="logo" src="{{ '/images/logo.webp' | relative_url }}" alt="Логотип" /></a>
     </div>
 
     <div class="header-right">
         <nav>
             <ul>
-                <li><a href="#komp">О компании</a></li>
-                <li><a href="#kont">Контакты</a></li>
+                <li><a href="{{ '/' | relative_url }}#komp">О компании</a></li>
+                <li><a href="{{ '/' | relative_url }}#kont">Контакты</a></li>
             </ul>
         </nav>
     </div>
@@ -31,17 +31,10 @@
 <div class="mobile-menu">
     <nav>
         <ul>
-            <li><a href="#pro">Проекты</a></li>
-            <li><a href="#usl">Услуги</a></li>
-            <li><a href="#komp">О компании</a></li>
-            <li><a href="#kont">Контакты</a></li>
+            <li><a href="{{ '/' | relative_url }}#pro">Проекты</a></li>
+            <li><a href="{{ '/' | relative_url }}#usl">Услуги</a></li>
+            <li><a href="{{ '/' | relative_url }}#komp">О компании</a></li>
+            <li><a href="{{ '/' | relative_url }}#kont">Контакты</a></li>
         </ul>
     </nav>
 </div>
-
-<script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        this.classList.toggle('active');
-        document.querySelector('.mobile-menu').classList.toggle('active');
-    });
-</script>

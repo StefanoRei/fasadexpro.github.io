@@ -39,3 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
     window.dispatchEvent(new Event('scroll'));
   });
+
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.mobile-menu').classList.toggle('active');
+});

@@ -1,10 +1,13 @@
+---
+layout: project
+---
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Многофункциональный комплекс с апарт-отелем в составе ТПУ «Ботанический сад»</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="../css/project.css" />
     <style>
         /* Фиксированный header */
@@ -189,61 +192,22 @@
 </head>
 
 <body>
-    <header>
-        <div class="menu-toggle">
-            <div class="hamburger"></div>
-            <div class="hamburger"></div>
-            <div class="hamburger"></div>
-        </div>
-        
-        <div class="header-left">
-            <nav>
-                <ul>
-                    <li><a href="../../#pro">Проекты</a></li>
-                    <li><a href="../../#usl">Услуги</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="header-logo">
-            <a href="../../index.html"><img class="logo" src="../../images/logo_final.webp" alt="Логотип" /></a>
-        </div>
-
-        <div class="header-right">
-            <nav>
-                <ul>
-                    <li><a href="../../#komp">О компании</a></li>
-                    <li><a href="../../#kont">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="mobile-menu">
-        <nav>
-            <ul>
-                <li><a href="../../#pro">Проекты</a></li>
-                <li><a href="../../#usl">Услуги</a></li>
-                <li><a href="../../#komp">О компании</a></li>
-                <li><a href="../../#kont">Контакты</a></li>
-            </ul>
-        </nav>
-    </div>
+    {% include header.html %}
 
     <main>
         <section class="content">
             <div class="content-wrapper">
                 <div class="text-content">
-                    <h3 class="uptitle">2023-2024</h3>
-                    <h1 class="title">Многофункциональный комплекс с апарт-отелем в составе ТПУ «Ботанический сад»</h1>
-                    <h3 class="subtitle"></h3>
+                    <h3 class="uptitle">{{ page.years }}</h3>
+                    <h1 class="title">{{ page.title }}</h1>
+                    <h3 class="subtitle">{{ page.subtitle }}</h3>
                     <p class="paragraph">
-                        Объект объединяет общественно-деловую, торгово-развлекательную функции и апарт-отель класса «комфорт». В состав входят офисные помещения (класса В+), торговые галереи, фудкорт, кинотеатр и апартаменты с отделкой под ключ. Архитектурное решение представляет собой современное здание с панорамным остеклением и интегрированными элементами транспортно-пересадочного узла.
+                        {{ page.description }}
                     </p>
                 </div>
                 <div class="image-content">
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="main.webp" loading="lazy" alt="Многофункциональный комплекс с апарт-отелем">
+                        <img data-img-name="{{ page.main_image }}" loading="lazy" alt="{{ page.title }}">
                     </div>
                 </div>
             </div>
@@ -261,15 +225,15 @@
                 <div class="table-data-row">
                     <div class="table-cell">
                         <p>
-                            Наши сотрудники принимали участие в инжиниринге проекта, выполнили проектирование светопрозрачных конструкций на базе алюминиевой системы «Алютех» общей площадью 16 000 м², а также осуществила навесного вентилируемого фасада с применением алюмокомпозитного материала площадью 15 000 м².
+                            {{ page.work_description }}
                         </p>
                     </div>
                     <div class="table-cell">
-                        <p>Nikken Sekkei, ABD Architects</p>
+                        <p>{{ page.designer }}</p>
                     </div>
                     <div class="table-cell">
                         <p>
-                           ГК «Пионер»/ ООО «Альфа Строй»
+                            {{ page.client }}
                         </p>
                     </div>
                 </div>
@@ -277,42 +241,15 @@
         </section>
         <section class="image-section">
             <div class="image-gallery">
+                {% for column in page.gallery_columns %}
                 <div class="image-gallery-column">
+                    {% for image in column %}
                     <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_1.webp" loading="lazy" alt="Фото проекта 1">
+                        <img data-img-name="{{ image }}" loading="lazy" alt="Фото проекта {{ forloop.index }}">
                     </div>
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_4.webp" loading="lazy" alt="Фото проекта 2">
-                    </div>
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_7.webp" loading="lazy" alt="Фото проекта 2">
-                    </div>
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_10.webp" loading="lazy" alt="Фото проекта 2">
-                    </div>
+                    {% endfor %}
                 </div>
-                <div class="image-gallery-column">
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_2.webp" loading="lazy" alt="Фото проекта 3">
-                    </div>
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_5.webp" loading="lazy" alt="Фото проекта 2">
-                    </div>
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_8.webp" loading="lazy" alt="Фото проекта 2">
-                    </div>
-                </div>
-                <div class="image-gallery-column">
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_3.webp" loading="lazy" alt="Фото проекта 1">
-                    </div>
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_6.webp" loading="lazy" alt="Фото проекта 2">
-                    </div>
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="image_9.webp" loading="lazy" alt="Фото проекта 2">
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </section>
     </main>
@@ -324,20 +261,7 @@
 
     <div id="saveMessage">Сохранение изображений запрещено</div>
 
-    <footer id="kont">
-        <div class="footer-content">Наши Контакты</div>
-        <div class="footer-content">
-            <a href="https://t.me/age_evaa" target="_blank" rel="nofollow noopener" aria-label="telegram"
-                style="width: 30px; height: 30px">
-                <svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.160.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.400-2.546.705-4.485.767-5.362Z"
-                        fill="#ffffff"></path>
-                </svg>
-            </a>
-        </div>
-    </footer>
+    {% include footer.html %}
 
     <script src="../../js/privacy.js"></script>
     <script src="../../js/image-optimizer.js"></script>

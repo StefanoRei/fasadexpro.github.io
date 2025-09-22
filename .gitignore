@@ -1,1 +1,8 @@
-.vscode/settings.json
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+Gemfile
+Gemfile.lock
+.vscode

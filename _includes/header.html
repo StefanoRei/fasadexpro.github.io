@@ -1,0 +1,47 @@
+<header>
+    <div class="menu-toggle">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+    </div>
+
+    <div class="header-left">
+        <nav>
+            <ul>
+                <li><a href="#pro">Проекты</a></li>
+                <li><a href="#usl">Услуги</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-logo">
+        <img class="logo" src="images/logo_final.webp" />
+    </div>
+
+    <div class="header-right">
+        <nav>
+            <ul>
+                <li><a href="#komp">О компании</a></li>
+                <li><a href="#kont">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="mobile-menu">
+    <nav>
+        <ul>
+            <li><a href="#pro">Проекты</a></li>
+            <li><a href="#usl">Услуги</a></li>
+            <li><a href="#komp">О компании</a></li>
+            <li><a href="#kont">Контакты</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('.mobile-menu').classList.toggle('active');
+    });
+</script>

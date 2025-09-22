@@ -7,7 +7,7 @@ description: "Жилой комплекс «Victory Park Residences» (корп�
 main_image: "main.webp"
 work_description: "Наши сотрудники принимали участие в инжиниринге проекта, выполнили проектирование современных фасадных систем, которое включало: светопрозрачные конструкции 13 000 м² на базе специального инженерного решения Schüco с применением энергоэффективного остекления; навесные вентилируемые фасады общей площадью 26 000 м² с комбинированной облицовкой из композитных панелей на основе натуральной меди 13 500 м² и натурального камня 12 500 м²."
 designer: '<a href="https://www.skuratov-arch.ru/portfolio/zhiloj-kompleks-na-ul-bratev-fonchenko/  ">ООО «Архитектурное бюро Сергея Скуратова»</a>'
-client: "ANT Development/ ООО "АНТТЕК""
+client: 'ANT Development/ ООО "АНТТЕК"'
 gallery_columns:
   - ["image_1.webp", "image_4.webp"]
   - ["image_2.webp", "image_5.webp", "image_8.webp"]

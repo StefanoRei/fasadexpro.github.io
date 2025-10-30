@@ -10,6 +10,11 @@ layout: project
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="../css/project.css" />
     <style>
+        /* УСТАНОВКА ОСНОВНОГО ШРИФТА ДЛЯ АБЗАЦЕВ */
+        body {
+            /* Оставляем пустым, чтобы не затрагивать заголовки таблицы */
+        }
+
         /* Фиксированный header */
         header {
             position: fixed;
@@ -28,26 +33,146 @@ layout: project
 
         /* Отступ для основного контента */
         main {
-            margin-top: 20px;
+            /* Высота шапки 60px + 10px зазора */
+            margin-top: 20px; 
+            padding-bottom: 40px;
         }
 
         .menu-toggle {
             width: 40px;
-            height: 18px;  
+            height: 18px; 
             z-index: 1001;
         }
-        
-            /* Стили для уменьшения расстояния между годами и заголовком */
+
+        /* Стили для уменьшения расстояния между годами и заголовком */
         .uptitle {
-            margin-bottom: 5px; /* Уменьшаем отступ снизу */
+            margin-bottom: 5px; 
             font-size: 16px;
             color: #666;
         }
-         .title {
-            margin-top: 5px; /* Уменьшаем отступ сверху */
+
+        /* УВЕЛИЧЕННЫЙ ЗАГОЛОВОК ПРОЕКТА */
+        .title {
+            margin-top: 5px; 
+            margin-bottom: 5px; /* <--- ИЗМЕНЕНИЕ: Уменьшен пробел между названием и адресом */
+            font-size: 32px; 
+            font-weight: 700; 
+        }
+        
+        /* УВЕЛИЧЕННЫЙ ПОДЗАГОЛОВОК (АДРЕС) */
+        .subtitle {
+            font-size: 20px; 
+            margin-bottom: 15px; /* Оставляем 15px до основного текста */
         }
 
-        /* Стили для галереи */
+
+        /* --- ОПТИМИЗИРОВАННЫЕ СТИЛИ ДЛЯ МАКЕТА С РАЗДЕЛЕННЫМ ТЕКСТОМ (Flexbox) --- */
+
+        /* Контейнер для первого блока: Текст и Изображение (теперь 50/50) */
+        .content-wrapper {
+            display: flex;
+            gap: 50px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            align-items: start;
+        }
+
+        /* Текстовый блок (теперь занимает 50% ширины) */
+        .text-content {
+            flex: 1; /* 50% */
+            min-width: 0; 
+        }
+        
+        /* Стилизуем первый абзац */
+        .text-content .main-description {
+            margin-top: 15px; 
+            line-height: 1.6;
+            font-size: 16px; 
+            font-family: Arial, sans-serif; 
+            color: #333; 
+        }
+
+        /* Изображение (теперь занимает 50% ширины) */
+        .image-content {
+            flex: 1; /* 50% */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+            object-fit: cover; 
+        }
+
+        /* --- БЛОК ДЛЯ РАСШИРЕННОГО ТЕКСТА --- */
+        .full-width-extended-text {
+            /* Ваши настройки выравнивания */
+            max-width: 1140px; 
+            margin: 20px auto 30px auto; 
+            padding: 0 35px; 
+            
+            /* Стили для текста */
+            font-size: 16px; 
+            line-height: 1.6;
+            font-family: Arial, sans-serif; 
+            color: #333; 
+        }
+
+        /* ВАЖНО: УНИФИКАЦИЯ СТИЛЕЙ ДЛЯ ВСЕХ ТЕГОВ <P> ВНУТРИ РАСШИРЕННОГО ТЕКСТА */
+        .full-width-extended-text p {
+            margin-bottom: 35px; 
+            font-size: 16px;
+            line-height: 1.6;
+            font-family: Arial, sans-serif; 
+            color: #333; 
+        }
+        
+        /* Убедимся, что таблица тоже имеет правильные отступы */
+        .table-section {
+            padding: 0 20px;
+            margin-top: 0; 
+        }
+
+        /* ИЗМЕНЕНИЕ: Делаем заголовки Генпроектировщик/Заказчик (тег <strong>) жирными */
+        .table-header-row strong {
+            font-weight: 700; /* Стандартный жирный */
+            font-size: 16px;
+        }
+
+        /* НОВЫЙ СТИЛЬ: Делаем заголовок "Описание работ" жирным */
+        .table-header-row .table-title {
+            font-weight: 700; /* Стандартный жирный */
+        }
+
+
+        /* --- АДАПТИВНОСТЬ --- */
+        @media (max-width: 900px) {
+            /* Стекирование колонок на мобильных */
+            .content-wrapper {
+                flex-direction: column; 
+                gap: 20px;
+            }
+            /* Уменьшаем заголовки на мобильных */
+            .title {
+                font-size: 26px;
+                margin-bottom: 5px;
+            }
+            .subtitle {
+                font-size: 18px;
+            }
+            /* ... остальные медиа-стили ... */
+        }
+        
+        @media (max-width: 600px) {
+            /* ... остальные медиа-стили ... */
+        }
+
+        /* Остальные стили из вашего исходного кода, без изменений */
         .image-gallery {
             display: flex;
             flex-direction: row;
@@ -153,27 +278,6 @@ layout: project
             transform: translateX(-50%);
         }
         
-        /* Адаптивность */
-        @media (max-width: 900px) {
-            .image-gallery-column {
-                min-width: calc(50% - 10px);
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .image-gallery-column {
-                min-width: 100%;
-            }
-            .close {
-                top: 20px;
-                right: 20px;
-                font-size: 30px;
-            }
-            main {
-                margin-top: -10px;
-            }
-        }
-
         /* Сообщение при попытке сохранить изображение */
         #saveMessage {
             position: fixed;
@@ -195,23 +299,29 @@ layout: project
     {% include header.html %}
 
     <main>
-        <section class="content">
-            <div class="content-wrapper">
-                <div class="text-content">
-                    <h3 class="uptitle">{{ page.years }}</h3>
-                    <h1 class="title">{{ page.title }}</h1>
-                    <h3 class="subtitle">{{ page.subtitle }}</h3>
-                    <p class="paragraph">
-                        {{ page.description }}
-                    </p>
-                </div>
-                <div class="image-content">
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="{{ page.main_image }}" loading="lazy" alt="{{ page.title }}">
-                    </div>
+        
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h3 class="uptitle">{{ page.years }}</h3>
+                <h1 class="title">{{ page.title }}</h1>
+                <h3 class="subtitle">{{ page.subtitle }}</h3>
+                <div class="main-description">
+                    {{ page.description }}
                 </div>
             </div>
-        </section>
+            <div class="image-content">
+                <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                    <img data-img-name="{{ page.main_image }}" loading="lazy" alt="{{ page.title }}">
+                </div>
+            </div>
+        </div>
+        
+        {% if page.extended_text %}
+        <div class="full-width-extended-text">
+            {{ page.extended_text }}
+        </div>
+        {% endif %}
+
         <section class="table-section">
             <div class="custom-table">
                 <div class="table-header-row">

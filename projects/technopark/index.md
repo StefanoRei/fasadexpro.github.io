@@ -23,7 +23,7 @@ work_description: " Наши сотрудники принимали участ�
 designer: '<a href="https://v-p.com/en/projet/skolkovo-technopark/">Valode & Pistre architects</a>, ЗАО «СИГНИ ГРУП»'
 client: "ООО «ОДПС Центра разработки и коммерциализации новых технологий (ИЦ Сколково)»/"
 gallery_columns:
-  - ["image_1.webp", "image_4.webp", "image_9.webp", "image_12.webp"]
+  - ["image_1.webp", "image_4.webp", "image_9.webp"]
   - ["image_2.webp", "image_8.webp", "image_11.webp", "image_14.webp"]
-  - ["image_3.webp", "image_13.webp", "image_15.webp"]
+  - ["image_3.webp", "image_13.webp", "image_15.webp", "image_12.webp"]
 ---

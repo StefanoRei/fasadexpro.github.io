@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: zh
 optimize_images: false
 title: "“Kurumoch”国际机场，一期开发"
 years: "2014-2015"

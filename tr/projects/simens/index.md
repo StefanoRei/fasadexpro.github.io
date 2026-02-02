@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: tr
 optimize_images: false
 title: "LLC 'Siemens Gaz Türbini Teknolojileri' Fabrikası"
 years: "2014-2015"

@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: ar
 optimize_images: false
 dir: rtl
 title: "مصنع شركة 'سيمنز لتقنيات توربينات الغاز' ذ.م.م"

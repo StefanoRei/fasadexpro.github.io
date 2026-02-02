@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: en
 optimize_images: false
 title: "Factory of LLC 'Siemens Gas Turbine Technologies'"
 years: "2014-2015"

@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: en
 optimize_images: false
 title: "International Airport 'Kurumoch', 1st stage of development"
 years: "2014-2015"

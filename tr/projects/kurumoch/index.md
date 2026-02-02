@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: tr
 optimize_images: false
 title: "Uluslararası Havalimanı 'Kurumoch', 1. geliştirme aşaması"
 years: "2014-2015"

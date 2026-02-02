@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: ru
 optimize_images: false
 title: "Международный аэропорт «Курумоч», 1-я очередь развития."
 years: "2014-2015"

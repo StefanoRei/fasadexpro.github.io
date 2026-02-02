@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: ar
 optimize_images: false
 dir: rtl
 title: "مطار 'كورموتش' الدولي، المرحلة الأولى من التطوير"

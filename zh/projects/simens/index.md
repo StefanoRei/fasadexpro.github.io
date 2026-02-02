@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: zh
 optimize_images: false
 title: "西门子燃气轮机技术有限公司工厂"
 years: "2014-2015"

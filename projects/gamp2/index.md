@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: ru
 optimize_images: false
 title: "Здание второй сцены Государственного академического Мариинского театра"
 years: "2011-2013"

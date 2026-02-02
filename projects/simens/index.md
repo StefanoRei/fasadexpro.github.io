@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: ru
 optimize_images: false
 title: "Завод ООО «Сименс Технологии Газовых Турбин»"
 years: "2014-2015"

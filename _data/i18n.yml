@@ -1,0 +1,132 @@
+nav:
+  projects:
+    ru: "Проекты"
+    en: "Projects"
+    zh: "项目"
+    ar: "المشاريع"
+    tr: "Projeler"
+  services:
+    ru: "Услуги"
+    en: "Services"
+    zh: "服务"
+    ar: "الخدمات"
+    tr: "Hizmetler"
+  about:
+    ru: "О компании"
+    en: "About"
+    zh: "关于公司"
+    ar: "عن الشركة"
+    tr: "Hakkımızda"
+  contacts:
+    ru: "Контакты"
+    en: "Contacts"
+    zh: "联系方式"
+    ar: "اتصل بنا"
+    tr: "İletişim"
+  vacancies:
+    ru: "Вакансии"
+    en: "Vacancies"
+    zh: "职位空缺"
+    ar: "وظائف شاغرة"
+    tr: "İş İlanları"
+
+sections:
+  projects_title:
+    ru: "Проекты"
+    en: "Projects"
+    zh: "项目"
+    ar: "المشاريع"
+    tr: "Projeler"
+  services_title:
+    ru: "Услуги"
+    en: "Services"
+    zh: "服务"
+    ar: "الخدمات"
+    tr: "Hizmetler"
+  about_title:
+    ru: "О компании"
+    en: "About us"
+    zh: "关于公司"
+    ar: "عن الشركة"
+    tr: "Hakkımızda"
+  contacts_title:
+    ru: "Наши Контакты"
+    en: "Our Contacts"
+    zh: "我们的联系方式"
+    ar: "جهات الاتصال الخاصة بنا"
+    tr: "İletişim Bilgilerimiz"
+  more:
+    ru: "Подробнее"
+    en: "More"
+    zh: "更多"
+    ar: "أكثر"
+    tr: "Daha fazla"
+  contact_title:
+    ru: "Остались вопросы? Свяжитесь с нами!"
+    en: "Have questions? Contact us!"
+    zh: "有什么问题吗？联系我们！"
+    ar: "لديك أسئلة؟ اتصل بنا!"
+    tr: "Sorularınız mı есть? Bize ulaşın!"
+  contact_subtitle:
+    ru: "Оставьте заявку, чтобы наши специалисты могли Вас проконсультировать"
+    en: "Leave a request so that our specialists can advise you"
+    zh: "通过留下请求,我们的专家可以为您提供建议"
+    ar: "اترك طلبًا حتى يتمكن خبراؤنا من تقديم المشورة لك"
+    tr: "Uzmanlarımızın size tavsiyede bulunabilmesi için bir istek bırakın"
+  name_label:
+    ru: "Имя"
+    en: "Name"
+    zh: "名称"
+    ar: "اسم"
+    tr: "İsim"
+  submit_btn:
+    ru: "Отправить"
+    en: "Send"
+    zh: "发送"
+    ar: "يرسل"
+    tr: "Göndermek"
+  success_msg:
+    ru: "Спасибо! Ваша заявка отправлена."
+    en: "Thank you! Your application has been sent."
+    zh: "谢谢！您的申请已发送。"
+    ar: "شكرًا لك! لقد تم إرسال طلبك."
+    tr: "Teşekkür ederim! Başvurunuz gönderildi."
+  work_description:
+    ru: "Описание работ"
+    en: "Work Description"
+    zh: "工作描述"
+    ar: "وصف العمل"
+    tr: "İş Tanımı"
+  designer:
+    ru: "Генпроектировщик"
+    en: "General Designer"
+    zh: "总设计师"
+    ar: "المصمم العام"
+    tr: "Genel Tasarımcı"
+  client:
+    ru: "Заказчик/Генподрядчик"
+    en: "Client/General Contractor"
+    zh: "客户/总承包商"
+    ar: "العميل / المقاول العام"
+    tr: "Müşteri/Genel Yüklenici"
+  project_photo:
+    ru: "Фото проекта"
+    en: "Project photo"
+    zh: "项目照片"
+    ar: "صورة المشروع"
+    tr: "Proje fotoğrafı"
+
+intro:
+  projects:
+    ru: "Каждый из этих проектов не только обогатил наш опыт, но и стал для нас источником вдохновения. Полученные знания и навыки стали основой для нашей компании, позволяя нам реализовывать идеи более эффективно и с большей страстью. Мы гордимся тем, что каждое наше начинание выделяется на фоне большого опыта, который мы накоплили, и продолжим использовать его для достижения новых высот."
+    en: "Each of these projects has not only enriched our experience but also became a source of inspiration for us. The knowledge and skills gained became the foundation for our company, allowing us to implement ideas more effectively and with greater passion. We are proud that each of our endeavors stands out against the background of the extensive experience we have accumulated, and we will continue to use it to reach new heights."
+    zh: "每一个项目都不仅丰富了我们的经验，也成为我们的灵感源泉。所获得的知识和技能成为我们公司的基石，使我们能够更有效、更有激情地实现想法。我们感到自豪的是，我们的每一次努力都在我们积累的丰富经验背景下脱颖而出，我们将继续利用它来达到新的高度。"
+    ar: "لم يغني كل مشروع من هذه المشاريع خبرتنا فحسب، بل أصبح أيضًا مصدر إلهام لنا. أصبحت المعرفة والمهارات المكتسبة هي الأساس لشركتنا، مما سمح لنا بتنفيذ الأفكار بشكل أكثر فعالية وبشغف أكبر. نحن فخورون بأن كل مساعينا تبرز على خلفية الخبرة الواسعة التي تراكمت لدينا، وسنستمر في استخدامها للوصول إلى آفاق جديدة."
+    tr: "Bu projelerin her biri sadece deneyimimizi zenginleştirmekle kalmadı, aynı zamanda bizim için bir ilham kaynağı oldu. Edinilen bilgi ve beceriler, fikirleri daha etkili ve daha büyük bir tutkuyla uygulamamıza olanak tanıyarak şirketimizin temelini oluşturdu. Her bir girişimimizin biriktirdiğimiz geniş deneyimin arka planında öne çıkmasından gurur duyuyoruz ve bunu yeni zirvelere ulaşmak için kullanmaya devam edeceğiz."
+
+about_text:
+  ru: "ФЭП – ваш надежный партнер в создании современных фасадных решений. Мы – команда высококвалифицированных специалистов в области проектирования и реализации фасадных систем. Несмотря на относительно недавнее появление на рынке, мы обладаем солидным профессиональным опытом и используем передовые технологии в создании современных фасадных решений. Наша работа базируется на трех фундаментальных принципах: глубокой технической экспертизе, индивидуальном подходе к каждому проекту и полной ответственности за конечный результат. Мы тщательно анализируем все аспекты будущего фасада - от архитектурной концепции до технико-экономических показателей, предлагая оптимальные решения, соответствующие самым строгим требованиям качества и надежности. Особое внимание уделяем детальной проработке всех этапов проекта, что позволяет нам гарантировать безупречное исполнение и долговечность реализованных фасадных систем. Наши специалисты постоянно отслеживают новые тенденции в отрасли, внедряя инновационные материалы и технологии, что в сочетании с проверенными временем методиками работы дает возможность создавать действительно уникальные фасадные решения. Мы гордимся тем, что каждый наш проект - это гармоничное сочетание эстетики, функциональности и экономической эффективности, воплощенное в металле, стекле и современных композитных материалах."
+  en: "FEP is your reliable partner in creating modern facade solutions. We are a team of highly qualified specialists in the field of design and implementation of facade systems. Despite its relatively recent appearance on the market, we have solid professional experience and use advanced technologies in creating modern facade solutions. Our work is based on three fundamental principles: deep technical expertise, an individual approach to each project and full responsibility for the end result. We carefully analyze all aspects of the future facade - from the architectural concept to technical and economic indicators, offering optimal solutions that meet the strictest requirements for quality and reliability. We pay special attention to the detailed development of all stages of the project, which allows us to guarantee impeccable execution and durability of the implemented facade systems. Our specialists constantly monitor new trends in the industry, introducing innovative materials and technologies, which, in combination with time-tested working methods, makes it possible to create truly unique facade solutions. We are proud that each of our projects is a harmonious combination of aesthetics, functionality and economic efficiency, embodied in metal, glass and modern composite materials."
+  zh: "FEP 是您创建现代外墙解决方案的可靠合作伙伴。我们是一支在设计和实施外墙系统领域的高素质专家团队。尽管在市场上出现的时间相对较短，但我们拥有扎实的专业经验，并使用先进的技术来创建现代外墙解决方案。我们的工作基于三个基本原则：深厚的技术专业知识、针对每个项目的个性化方法以及对最终结果的全面负责。我们仔细分析未来外墙的所有方面——从建筑概念到技术和经济指标，提供符合最严格质量和可靠性要求的最佳解决方案。我们特别关注项目所有阶段的详细开发，这使我们能够保证所实施外墙系统的完美执行和耐用性。我们的专家不断监测行业的最新趋势，引入创新的材料和技术，结合久经考验的工作方法，使创造真正独特的外墙解决方案成为可能。我们感到自豪的是，我们的每一个项目都是美学、功能和经济效率的和谐结合，体现在金属、玻璃和现代复合材料中。"
+  ar: "FEP هي شريكك الموثوق في إنشاء حلول الواجهات الحديثة. نحن فريق من المتخصصين المؤهلين تأهيلا عاليا في مجال تصميم وتنفيذ أنظمة الواجهات. على الرغم من ظهورنا الأخير نسبياً في السوق، إلا أننا نمتلك خبرة مهنية قوية ونستخدم تقنيات متقدمة في إنشاء حلول الواجهات الحديثة. يعتمد عملنا على ثلاثة مبادئ أساسية: الخبرة الفنية العميقة، والنهج الفردي لكل مشروع والمسؤولية الكاملة عن النتيجة النهائية. نحن نحلل بعناية جميع جوانب الواجهة المستقبلية - من المفهوم المعماري إلى المؤشرات الفنية والاقتصادية، ونقدم الحلول المثلى التي تلبي صرامة متطلبات الجودة والموثوقية. نحن نولي اهتمامًا خاصًا للتطوير التفصيلي لجميع مراحل المشروع، مما يتيح لنا ضمان التنفيذ الخالي من العيوب والمتانة لأنظمة الواجهات المنفذة. يراقب متخصصونا باستمرار الاتجاهات الجديدة في الصناعة، ويقدمون مواد وتقنيات مبتكرة، والتي، بالاقتران مع أساليب العمل المختبرة عبر الزمن، تجعل من الممكن إنشاء حلول واجهات فريدة حقًا. نحن فخورون بأن كل مشروع من مشاريعنا هو مزيج متناغم من الجمال والوظيفة والكفاءة الاقتصادية، المتجسدة في المعدن والزجاج والمواد المركبة الحديثة."
+  tr: "FEP, modern cephe çözümleri oluşturmada güvenilir ortağınızdır. Cephe sistemlerinin tasarımı ve uygulanması alanında son derece nitelikli uzmanlardan oluşan bir ekibiz. Piyasada nispeten yeni görünmemize rağmen, sağlam bir mesleki deneyime sahibiz ve modern cephe çözümleri oluşturmada ileri teknolojiler kullanıyoruz. Çalışmalarımız üç temel ilkeye dayanmaktadır: derin teknik uzmanlık, her projeye bireysel yaklaşım ve nihai sonuç için tam sorumluluk. Mimari konseptten teknik ve ekonomik göstergelere kadar gelecekteki cephenin tüm yönlerini dikkatlice analiz ederek kalite ve güvenilirlik konusundaki en katı gereklilikleri karşılayan optimum çözümler sunuyoruz. Projenin tüm aşamalarının detaylı geliştirilmesine özel önem veriyoruz; bu da uygulanan cephe sistemlerinin kusursuz bir şekilde yürütülmesini ve dayanıklılığını garanti etmemizi sağlıyor. Uzmanlarımız, zaman içinde test edilmiş çalışma yöntemleriyle birleştiğinde gerçekten benzersiz cephe çözümleri yaratmayı mümkün kılan yenilikçi malzemeleri ve teknolojileri tanıtarak sektördeki yeni trendleri sürekli izlemektedir. Metalin, camın ve modern kompozit malzemelerin somutlaştığı her projemizin estetik, işlevsellik ve ekonomik verimliliğin uyumlu bir kombinasyonu olmasından gurur duyuyoruz."

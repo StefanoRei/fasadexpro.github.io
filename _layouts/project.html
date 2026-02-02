@@ -1,379 +1,124 @@
 ---
-layout: project
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="ru">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="../css/project.css" />
-    <style>
-        /* УСТАНОВКА ОСНОВНОГО ШРИФТА ДЛЯ АБЗАЦЕВ */
-       
+<link rel="stylesheet" href="{{ '/projects/css/project.css' | relative_url }}" />
+{% assign lang = page.lang | default: "ru" %}
+{% assign i18n = site.data.i18n %}
 
-        /* Фиксированный header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background-color: #5c7b8a;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            height: 60px;
-            z-index: 1000;
-        }
+<main>
+    <div class="content-wrapper">
+        <div class="text-content">
+            <h3 class="uptitle">{{ page.years }}</h3>
+            <h1 class="title">{{ page.title }}</h1>
+            <h3 class="subtitle">{{ page.subtitle }}</h3>
+            <div class="main-description">
+                {{ page.description }}
+            </div>
+        </div>
+        <div class="image-content">
+            <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
+                {% assign image_base_path = page.url | replace: '/en/', '/' | replace: '/zh/', '/' | replace: '/ar/',
+                '/' | replace: '/tr/', '/' | append: 'images' | relative_url %}
+                {% assign no_optimize = 'false' %}
+                {% if page.optimize_images == false %}
+                {% assign no_optimize = 'true' %}
+                {% endif %}
+                <img data-img-name="{{ page.main_image }}" data-base-path="{{ image_base_path }}"
+                    data-no-optimize="{{ no_optimize }}" loading="lazy" alt="{{ page.title }}">
+            </div>
+        </div>
+    </div>
 
-        /* Отступ для основного контента */
-        main {
-            /* Высота шапки 60px + 10px зазора */
-            margin-top: 20px; 
-            padding-bottom: 40px;
-        }
+    {% if page.extended_text %}
+    <div class="full-width-extended-text">
+        {{ page.extended_text }}
+    </div>
+    {% endif %}
 
-        .menu-toggle {
-            width: 40px;
-            height: 18px; 
-            z-index: 1001;
-        }
-
-        /* Стили для уменьшения расстояния между годами и заголовком */
-        .uptitle {
-            margin-bottom: 5px; 
-            font-size: 16px;
-            color: #666;
-        }
-
-        /* УВЕЛИЧЕННЫЙ ЗАГОЛОВОК ПРОЕКТА */
-        .title {
-            margin-top: 5px; 
-            margin-bottom: 5px; /* <--- ИЗМЕНЕНИЕ: Уменьшен пробел между названием и адресом */
-            font-size: 32px; 
-            font-weight: 700; 
-        }
-        
-        /* УВЕЛИЧЕННЫЙ ПОДЗАГОЛОВОК (АДРЕС) */
-        .subtitle {
-            font-size: 20px; 
-            margin-bottom: 15px; /* Оставляем 15px до основного текста */
-        }
-
-
-        /* --- ОПТИМИЗИРОВАННЫЕ СТИЛИ ДЛЯ МАКЕТА С РАЗДЕЛЕННЫМ ТЕКСТОМ (Flexbox) --- */
-
-        /* Контейнер для первого блока: Текст и Изображение (теперь 50/50) */
-        .content-wrapper {
-            display: flex;
-            gap: 50px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 0 20px; 
-            align-items: start;
-        }
-
-        /* Текстовый блок (теперь занимает 50% ширины) */
-        .text-content {
-            flex: 1; /* 50% */
-            min-width: 0; 
-        }
-        
-        /* Стилизуем первый абзац */
-        .text-content .main-description {
-            margin-top: 15px; 
-            line-height: 1.6;
-            font-size: 16px; 
-            font-family: Arial, sans-serif; 
-            color: #333; 
-        }
-
-        /* Изображение (теперь занимает 50% ширины) */
-        .image-content {
-            flex: 1; /* 50% */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .image-content img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 5px;
-            object-fit: cover; 
-        }
-
-        /* --- БЛОК ДЛЯ РАСШИРЕННОГО ТЕКСТА --- */
-        .full-width-extended-text {
-            /* Ваши настройки выравнивания */
-            max-width: 1140px; 
-            margin: 20px auto 30px auto; 
-            padding: 0 35px; 
-            
-            /* Стили для текста */
-            font-size: 16px; 
-            line-height: 1.6;
-            font-family: Arial, sans-serif; 
-            color: #333; 
-        }
-
-        /* ВАЖНО: УНИФИКАЦИЯ СТИЛЕЙ ДЛЯ ВСЕХ ТЕГОВ <P> ВНУТРИ РАСШИРЕННОГО ТЕКСТА */
-        .full-width-extended-text p {
-            margin-bottom: 35px; 
-            font-size: 16px;
-            line-height: 1.6;
-            font-family: Arial, sans-serif; 
-            color: #333; 
-        }
-        
-        /* Убедимся, что таблица тоже имеет правильные отступы */
-        .table-section {
-            padding: 0 20px;
-            margin-top: 0; 
-        }
-
-        /* ИЗМЕНЕНИЕ: Делаем заголовки Генпроектировщик/Заказчик (тег <strong>) жирными */
-        .table-header-row strong {
-            font-weight: 700; /* Стандартный жирный */
-            font-size: 16px;
-        }
-
-        /* НОВЫЙ СТИЛЬ: Делаем заголовок "Описание работ" жирным */
-        .table-header-row .table-title {
-            font-weight: 700; /* Стандартный жирный */
-        }
-
-
-        /* --- АДАПТИВНОСТЬ --- */
-        @media (max-width: 900px) {
-            /* Стекирование колонок на мобильных */
-            .content-wrapper {
-                flex-direction: column; 
-                gap: 20px;
-            }
-            /* Уменьшаем заголовки на мобильных */
-            .title {
-                font-size: 26px;
-                margin-bottom: 5px;
-            }
-            .subtitle {
-                font-size: 18px;
-            }
-            /* ... остальные медиа-стили ... */
-        }
-        
-        @media (max-width: 600px) {
-            /* ... остальные медиа-стили ... */
-        }
-
-        /* Остальные стили из вашего исходного кода, без изменений */
-        .image-gallery {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 20px;
-        }
-        
-        .image-gallery-column {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .image-gallery img, .image-content img {
-            width: 100%;
-            height: auto;
-            display: block;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-            background: #f5f5f5;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        
-        .image-gallery img.loaded, .image-content img.loaded {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        
-        .image-gallery img:hover, .image-content img:hover {
-            transform: scale(1.02);
-        }
-
-        /* Стили для модального окна */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow: auto;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            touch-action: none;
-        }
-        
-        .modal.active {
-            display: block;
-            opacity: 1;
-        }
-        
-        .modal-content {
-            display: block;
-            max-width: 90%;
-            max-height: 90%;
-            margin: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(1);
-            transition: transform 0.3s ease;
-            cursor: grab;
-            user-select: none;
-            transform-origin: center center;
-        }
-        
-        .modal-content.grabbing {
-            cursor: grabbing;
-        }
-        
-        .close {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 2001;
-            transition: opacity 0.3s;
-        }
-        
-        .close:hover {
-            opacity: 0.8;
-        }
-        
-        body.modal-open {
-            overflow: hidden;
-        }
-        
-        /* Центрирование логотипа */
-        .header-logo {
-            position: absolute;
-            left: 47.5%;
-            transform: translateX(-50%);
-        }
-        
-        /* Сообщение при попытке сохранить изображение */
-        #saveMessage {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            z-index: 3000;
-            display: none;
-            text-align: center;
-        }
-    </style>
-</head>
-
-<body>
-    {% include header.html %}
-
-    <main>
-        
-        <div class="content-wrapper">
-            <div class="text-content">
-                <h3 class="uptitle">{{ page.years }}</h3>
-                <h1 class="title">{{ page.title }}</h1>
-                <h3 class="subtitle">{{ page.subtitle }}</h3>
-                <div class="main-description">
-                    {{ page.description }}
+    <section class="table-section">
+        <div class="custom-table">
+            <div class="table-header-row">
+                <div class="table-cell">
+                    <p class="table-title">{{ i18n.sections.work_description[lang] }}</p>
+                </div>
+                <div class="table-cell"><strong>{{ i18n.sections.designer[lang] }}</strong>
+                    <div class="table-divider"></div>
+                </div>
+                <div class="table-cell"><strong>{{ i18n.sections.client[lang] }}</strong>
+                    <div class="table-divider"></div>
                 </div>
             </div>
-            <div class="image-content">
+
+            <div class="table-data-row">
+                <div class="table-cell">
+                    <p>
+                        {{ page.work_description }}
+                    </p>
+                </div>
+                <div class="table-cell">
+                    <p>{{ page.designer }}</p>
+                </div>
+                <div class="table-cell">
+                    <p>
+                        {{ page.client }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="image-section">
+        <div class="image-gallery">
+            {% for column in page.gallery_columns %}
+            <div class="image-gallery-column">
+                {% for image in column %}
                 <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                    <img data-img-name="{{ page.main_image }}" loading="lazy" alt="{{ page.title }}">
-                </div>
-            </div>
-        </div>
-        
-        {% if page.extended_text %}
-        <div class="full-width-extended-text">
-            {{ page.extended_text }}
-        </div>
-        {% endif %}
-
-        <section class="table-section">
-            <div class="custom-table">
-                <div class="table-header-row">
-                    <div class="table-cell">
-                        <p class="table-title">Описание работ</p>
-                    </div>
-                    <div class="table-cell"><strong>Генпроектировщик</strong><div class="table-divider"></div></div>
-                    <div class="table-cell"><strong>Заказчик/Генподрядчик</strong><div class="table-divider"></div></div>
-                </div>
-                
-                <div class="table-data-row">
-                    <div class="table-cell">
-                        <p>
-                            {{ page.work_description }}
-                        </p>
-                    </div>
-                    <div class="table-cell">
-                        <p>{{ page.designer }}</p>
-                    </div>
-                    <div class="table-cell">
-                        <p>
-                            {{ page.client }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="image-section">
-            <div class="image-gallery">
-                {% for column in page.gallery_columns %}
-                <div class="image-gallery-column">
-                    {% for image in column %}
-                    <div class="image-protection" onclick="enlargeImage(this.querySelector('img'))">
-                        <img data-img-name="{{ image }}" loading="lazy" alt="Фото проекта {{ forloop.index }}">
-                    </div>
-                    {% endfor %}
+                    <img data-img-name="{{ image }}" data-base-path="{{ image_base_path }}"
+                        data-no-optimize="{{ no_optimize }}" loading="lazy"
+                        alt="{{ i18n.sections.project_photo[lang] | default: 'Project photo' }} {{ forloop.index }}">
                 </div>
                 {% endfor %}
             </div>
-        </section>
-    </main>
+            {% endfor %}
+        </div>
+    </section>
+</main>
 
-    <div id="imageModal" class="modal">
-        <span class="close" id="closeModal">&times;</span>
-        <img class="modal-content" id="enlargedImage" alt="Увеличенное изображение">
-    </div>
+<div id="imageModal" class="modal">
+    <span class="close" id="closeModal">&times;</span>
+    <img class="modal-content" id="enlargedImage" alt="Увеличенное изображение">
+</div>
 
-    <div id="saveMessage">Сохранение изображений запрещено</div>
+<div id="saveMessage">Сохранение изображений запрещено</div>
 
-    {% include footer.html %}
+<script src="{{ '/js/privacy.js' | relative_url }}"></script>
+<script src="{{ '/js/image-optimizer.js' | relative_url }}"></script>
+<script src="{{ '/projects/js/project.js' | relative_url }}"></script>
+<style>
+    /* Адаптация стилей под layout: default */
+    main {
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
 
-    <script src="../../js/privacy.js"></script>
-    <script src="../../js/image-optimizer.js"></script>
-    <script src="../js/project.js"></script>
-</body>
+    .header-logo {
+        position: static;
+        transform: none;
+    }
 
-</html>
+        {
+        % if lang=='ar' %
+    }
+
+    .custom-table {
+        direction: rtl;
+    }
+
+    .table-cell {
+        text-align: right;
+    }
+
+        {
+        % endif %
+    }
+</style>

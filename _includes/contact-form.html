@@ -1,0 +1,45 @@
+{% assign lang = page.lang | default: "ru" %}
+{% assign i18n = site.data.i18n %}
+
+<div class="contact-form-container">
+    <div class="contact-form-wrapper">
+        <div class="contact-form-content">
+            <h2 class="contact-form-title">{{ i18n.sections.contact_title[lang] }}</h2>
+            <p class="contact-form-description">{{ i18n.sections.contact_subtitle[lang] }}</p>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="text" id="name" name="name" required
+                                placeholder="{{ i18n.sections.name_label[lang] }}" class="form-input">
+                        </div>
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="email" id="email" name="email" required placeholder="Email" class="form-input">
+                        </div>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-wrapper phone-input">
+                            <span class="phone-prefix">+7</span>
+                            <input type="tel" id="phone" name="phone" required placeholder="(999) 999-99-99"
+                                class="form-input">
+                        </div>
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">{{ i18n.sections.submit_btn[lang] }}</button>
+
+                <div class="form-success" id="formSuccess" style="display:none;">
+                    {{ i18n.sections.success_msg[lang] }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

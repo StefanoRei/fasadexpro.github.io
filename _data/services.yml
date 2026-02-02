@@ -1,0 +1,70 @@
+- id: 1
+  title:
+    ru: "Профессиональное консультирование по фасадным решениям"
+    en: "Professional Consulting on Facade Solutions"
+    zh: "外墙解决方案专业咨询"
+    ar: "الاستشارات المهنية حول حلول الواجهات"
+    tr: "Cephe Çözümleri Üzerine Profesyonel Danışmanlık"
+  description:
+    ru: "Наша команда экспертов предлагает комплексное сопровождение на всех этапах проекта: от концепции до реализации. Мы адаптируем уровень вовлеченности под ваши задачи, гарантируя эффективное использование ресурсов и соблюдение сроков."
+    en: "Our team of experts offers comprehensive support at all stages of the project: from concept to implementation. We adapt the level of involvement to your tasks, guaranteeing effective use of resources and compliance with deadlines."
+    zh: "我们的专家团队在项目的各个阶段提供全面的支持：从概念到实施。我们根据您的任务调整参与程度，保证资源的有效利用和截止日期的遵守。"
+    ar: "يقدم فريق الخبراء لدينا دعمًا شاملاً في جميع مراحل المشروع: من المفهوم إلى التنفيذ. نحن نكيف مستوى المشاركة مع مهامك، مما يضمن الاستخدام الفعال للموارد والامتثال للمواعيد النهائية."
+    tr: "Uzman ekibimiz projenin tüm aşamalarında kapsamlı destek sunar: konseptten uygulamaya kadar. Katılım düzeyini görevlerinize göre uyarlayarak kaynakların verimli kullanılmasını ve son tarihlere uyulmasını garanti ediyoruz."
+  link: "services/kons"
+- id: 2
+  title:
+    ru: "Профессиональное проектирование фасадов"
+    en: "Professional Facade Design"
+    zh: "专业外墙设计"
+    ar: "تصميم الواجهات الاحترافي"
+    tr: "Profesyonel Cephe Tasarımı"
+  description:
+    ru: "Наша команда специалистов обеспечивает полный цикл проектирования — от концепции до рабочей документации. Мы гарантируем качество, соблюдение сроков и эффективное использование ресурсов."
+    en: "Our team of specialists provides a full design cycle — from concept to working documentation. We guarantee quality, compliance with deadlines and efficient use of resources."
+    zh: "我们的专家团队提供完整的设计周期——从概念到施工文件。我们保证质量、遵守截止日期和有效利用资源。"
+    ar: "يوفر فريق المتخصصين لدينا دورة تصميم كاملة - من المفهوم إلى وثائق العمل. نحن نضمن الجودة والامتثال للمواعيد النهائية والاستخدام الفعال للموارد."
+    tr: "Uzman ekibimiz, konseptten uygulama dökümantasyonuna kadar tam bir tasarım döngüsü sağlar. Kaliteyi, son tarihlere uyumu ve kaynakların verimli kullanılmasını garanti ediyoruz."
+  link: "services/proekt"
+- id: 3
+  title:
+    ru: "Управление проектами возведения фасадов"
+    en: "Facade Construction Project Management"
+    zh: "外墙施工项目管理"
+    ar: "إدارة مشاريع بناء الواجهات"
+    tr: "Cephe İnşaat Proje Yönetimi"
+  description:
+    ru: "Мы обеспечиваем комплексное управление строительством фасадов – от проектирования до ввода в эксплуатацию. Наша задача – четкая координация всех участников процесса для минимизации рисков и соблюдения сроков."
+    en: "We provide comprehensive management of facade construction – from design to commissioning. Our task is the clear coordination of all process participants to minimize risks and meet deadlines."
+    zh: "我们提供从设计到交付运营的外墙施工全面管理。我们的任务是明确协调所有流程参与者，以最大限度地降低风险并满足截止日期。"
+    ar: "نحن نقدم إدارة شاملة لبناء الواجهات - من التصميم إلى التكليف. مهمتنا هي التنسيق الواضح لجميع المشاركين في العملية لتقليل المخاطر والوفاء بالمواعيد النهائية."
+    tr: "Tasarım aşamasından devreye almaya kadar cephe inşaatının kapsamlı yönetimini sağlıyoruz. Görevimiz, riskleri en aza indirmek ve son tarihlere uymak için tüm süreç katılımcılarının net koordinasyonudur."
+  link: "services/uprav"
+- id: 4
+  title:
+    ru: "Оптимизация фасадных решений на стадии проектирования"
+    en: "Optimization of Facade Solutions at the Design Stage"
+    zh: "设计阶段的外墙解决方案优化"
+    ar: "تحسين حلول الواجهات في مرحلة التصميم"
+    tr: "Tasarım Aşamasında Cephe Çözümlerinin Optimizasyonu"
+  description:
+    ru: "Мы проводим комплексный анализ фасадных систем на ранних этапах, чтобы минимизировать затраты и избежать дорогостоящих изменений в процессе строительства. Наши решения обеспечивают оптимальное сочетание стоимости, надежности и эстетики."
+    en: "We conduct a comprehensive analysis of facade systems at early stages in order to minimize costs and avoid expensive changes in the construction process. Our solutions provide the optimal combination of cost, reliability and aesthetics."
+    zh: "我们在早期阶段对外墙系统进行综合分析，以降低成本并避免施工过程中的昂贵更改。我们的解决方案提供成本、可靠性和美学的最佳结合。"
+    ar: "نحن نجري تحليلاً شاملاً لأنظمة الواجهات في المراحل المبكرة من أجل تقليل التكاليف وتجنب التغييرات المكلفة في عملية البناء. توفر حلولنا المزيج الأمثل للتكلفة والموثوقية والجمال."
+    tr: "Maliyetleri en aza indirmek ve inşaat sürecindeki pahalı değişikliklerden kaçınmak için erken aşamalarda cephe sistemlerinin kapsamlı bir analizini yapıyoruz. Çözümlerimiz maliyet, güvenilirlik ve estetiğin en iyi kombinasyonunu sunar."
+  link: "services/optimizacia"
+- id: 5
+  title:
+    ru: "Профессиональная разработка конструкторской документации для фасадов"
+    en: "Professional Development of Design Documentation for Facades"
+    zh: "专业外墙设计文件开发"
+    ar: "التطوير المهني لوثائق التصميم للواجهات"
+    tr: "Cepheler İçin Tasarım Dökümantasyonunun Profesyonel Gelişimi"
+  description:
+    ru: "Мы создаем полный комплект рабочей документации (ОПР, КМ, КМД) для фасадных систем любой сложности. Наши решения гарантируют точность реализации проекта без переделок и превышения бюджета."
+    en: "We create a full set of working documentation (OPR, KM, KMD) for facade systems of any complexity. Our solutions guarantee the accuracy of project implementation without alterations or budget overruns."
+    zh: "我们为任何复杂程度的外墙系统创建全套工作文件（OPR、KM、KMD）。我们的解决方案保证了项目执行的准确性，无需改动或超出预算。"
+    ar: "نقوم بإنشاء مجموعة كاملة من وثائق العمل (OPR, KM, KMD) لأنظمة الواجهات من أي تعقيد. تضمن حلولنا دقة تنفيذ المشروع دون تعديلات أو تجاوزات في الميزانية."
+    tr: "Her türlü karmaşıklıktaki cephe sistemleri için tam bir uygulama dökümantasyonu (OPR, KM, KMD) seti oluşturuyoruz. Çözümlerimiz, değişiklik veya bütçe aşımı olmaksızın proje uygulamasının doğruluğunu garanti eder."
+  link: "services/razrabotka"

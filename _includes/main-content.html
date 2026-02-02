@@ -1,0 +1,70 @@
+{% assign lang = page.lang | default: "ru" %}
+{% assign i18n = site.data.i18n %}
+
+<main>
+    <section class="content" id="pro">
+        <h1 class="title">{{ i18n.sections.projects_title[lang] }}</h1>
+
+        <div class="projects-intro">
+            <p>{{ i18n.intro.projects[lang] }}</p>
+        </div>
+
+        <div class="projects-container">
+            {% for project in site.data.projects %}
+            {% if lang == "ru" %}
+            {% assign project_url = project.link | prepend: "/" | relative_url %}
+            {% else %}
+            {% assign project_url = project.link | prepend: "/" | prepend: lang | prepend: "/" | relative_url %}
+            {% endif %}
+            <a href="{{ project_url }}" class="project-card">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title[lang] }}" />
+                <div class="project-overlay">
+                    <h3>{{ project.title[lang] }}</h3>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="content" id="usl">
+        <h1 class="title">{{ i18n.sections.services_title[lang] }}</h1>
+        <div class="services-container">
+            {% for service in site.data.services %}
+            {% if lang == "ru" %}
+            {% assign service_url = service.link | prepend: "/" | relative_url %}
+            {% else %}
+            {% assign service_url = service.link | prepend: "/" | prepend: lang | prepend: "/" | relative_url %}
+            {% endif %}
+            <a href="{{ service_url }}" class="service-card">
+                <h3>{{ service.title[lang] }}</h3>
+                <p>{{ service.description[lang] }}</p>
+                <div class="service-more">
+                    <span>{{ i18n.sections.more[lang] }}</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="content" id="komp">
+        <h1 class="title">{{ i18n.sections.about_title[lang] }}</h1>
+        <div class="divider"></div>
+        <p class="paragraph">
+            {{ i18n.about_text[lang] | replace: ". ", ".<br><br>" | replace: "? ", "?<br><br>" }}
+        </p>
+
+        <!-- Кнопка Вакансии -->
+        <div class="vacancies-section">
+            <a href="{{ '/vacancies/vacancies.html' | relative_url }}" class="vacancy-btn">
+                <span>{{ i18n.nav.vacancies[lang] }}</span>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </section>
+</main>

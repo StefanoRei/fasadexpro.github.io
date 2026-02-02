@@ -1,0 +1,190 @@
+- id: 19
+  title:
+    ru: "Бизнес-центр Taller"
+    en: "Taller Business Center"
+    zh: "Taller 商务中心"
+    ar: "مركز أعمال Taller"
+    tr: "Taller İş Merkezi"
+  image: "images/Frame_38.webp"
+  link: "projects/taller"
+  endYear: 2024
+- id: 17
+  title:
+    ru: "Многофункциональный общественно-деловой и торгово- развлекательный комплекс с апарт- отелем в составе ТПУ «Ботанический сад»"
+    en: "Multifunctional public-business and shopping-entertainment complex with an apart-hotel as part of the Botanical Garden TPU"
+    zh: "“植物园”交通枢纽组成部分的多功能公共商务和购物娱乐综合体，含公寓式酒店"
+    ar: "مجمع تجاري وترفيهي وعام متعدد الوظائف مع فندق شقق كجزء من مركز نقل حدائق النباتات"
+    tr: "Botanik Bahçesi TPU'nun bir parçası olarak apart otel içeren çok fonksiyonlu kamu-iş ve alışveriş-eğlence kompleksi"
+  image: "images/Frame_36.webp"
+  link: "projects/botanicgarden"
+  endYear: 2024
+- id: 13
+  title:
+    ru: 'Музейно-выставочный центр "Коллекция"'
+    en: "Museum and Exhibition Center 'Collection'"
+    zh: "“收藏”博物馆和展览中心"
+    ar: "مركز المتاحف والمعارض 'Collection'"
+    tr: "'Koleksiyon' Müze ve Sergi Merkezi"
+  image: "images/Frame_31.webp"
+  link: "projects/collection"
+  endYear: 2024
+- id: 8
+  title:
+    ru: "Жилой комплекс AQUATORIA корп. В1, С1, В3"
+    en: "AQUATORIA Residential Complex, bldgs. B1, C1, B3"
+    zh: "AQUATORIA 住宅区，B1, C1, B3 栋"
+    ar: "مجمع AQUATORIA السكني، المباني B1, C1, B3"
+    tr: "AQUATORIA Konut Kompleksi, B1, C1, B3 blokları"
+  image: "images/Frame_26.webp"
+  link: "projects/aquatoria"
+  endYear: 2024
+- id: 18
+  title:
+    ru: "Иннополис Технопарк корпуса Б-1, В"
+    en: "Innopolis Technopark buildings B-1, V"
+    zh: "伊诺波利斯科技园 B-1, V 栋"
+    ar: "مباني تكنوبارك إنوبوليس B-1 و V"
+    tr: "Innopolis Teknopark B-1, V binaları"
+  image: "images/Frame_37.webp"
+  link: "projects/innopolis"
+  endYear: 2024
+- id: 14
+  title:
+    ru: "Жилой комплекс «Victory Park Residences» (6, 7 и 8 корпуса)"
+    en: "Victory Park Residences Residential Complex (buildings 6, 7 and 8)"
+    zh: "“胜利公园”住宅区（6, 7 和 8 栋）"
+    ar: "مجمع 'Victory Park Residences' السكني (المباني 6 و 7 و 8)"
+    tr: "Victory Park Residences Konut Kompleksi (6, 7 ve 8. bloklar)"
+  image: "images/Frame_32.webp"
+  link: "projects/victoryparkresidences"
+  endYear: 2024
+- id: 12
+  title:
+    ru: "Жилой комплекс «LEVEL Причальный»"
+    en: "LEVEL Prichalny Residential Complex"
+    zh: "“LEVEL Prichalny” 住宅区"
+    ar: "مجمع 'LEVEL Prichalny' السكني"
+    tr: "LEVEL Prichalny Konut Kompleksi"
+  image: "images/Frame_30.webp"
+  link: "projects/level"
+  endYear: 2023
+- id: 16
+  title:
+    ru: "Гостиничный комплекс Radisson"
+    en: "Radisson Hotel Complex"
+    zh: "雷迪森酒店综合体"
+    ar: "مجمع فنادق راديسون"
+    tr: "Radisson Otel Kompleksi"
+  image: "images/Frame_34.webp"
+  link: "projects/radisson"
+  endYear: 2022
+- id: 9
+  title:
+    ru: "Международный центр самбо, центр бокса на территории Олимпийского комплекса «Лужники»"
+    en: "International Sambo Center, Boxing Center on the territory of the Luzhniki Olympic Complex"
+    zh: "卢日尼基奥林匹克综合体内的国际桑博中心、拳击中心"
+    ar: "المركز الدولي للسامبو، ومركز الملاكمة في مجمع لوجنيكي الأولمبي"
+    tr: "Lujniki Olimpiyat Kompleksi arazisindeki Uluslararası Sambo Merkezi, Boks Merkezi"
+  image: "images/Frame_27.webp"
+  link: "projects/sambo"
+  endYear: 2022
+- id: 10
+  title:
+    ru: "Здание аппарата управления ПК «Шесхарис»"
+    en: "Sheskharis Management Apparatus Building"
+    zh: "谢斯哈里斯管理大楼"
+    ar: "مبنى جهاز إدارة شيسخاريس"
+    tr: "Sheskharis Yönetim Binası"
+  image: "images/Frame_28.webp"
+  link: "projects/sheskharis"
+  endYear: 2022
+- id: 11
+  title:
+    ru: "Бизнес-центр WORKKI"
+    en: "WORKKI Business Center"
+    zh: "WORKKI 商务中心"
+    ar: "مركز أعمال WORKKI"
+    tr: "WORKKI İş Merkezi"
+  image: "images/Frame_29.webp"
+  link: "projects/workki"
+  endYear: 2022
+- id: 15
+  title:
+    ru: "ЖК NOW, Урбан блок 2 и 4"
+    en: "NOW Residential Complex, Urban block 2 and 4"
+    zh: "NOW 住宅区，城市第 2 和 4 区"
+    ar: "مجمع NOW السكني، المجموعة الحضرية 2 و 4"
+    tr: "NOW Konut Kompleksi, Kentsel blok 2 ve 4"
+  image: "images/Frame_33.webp"
+  link: "projects/now"
+  endYear: 2022
+- id: 7
+  title:
+    ru: 'ЖК "Новочеремушкинская, 17"'
+    en: "Novocheryomushkinskaya 17 Residential Complex"
+    zh: "新切廖穆什基大街 17 号住宅区"
+    ar: "مجمع 'Novocheryomushkinskaya 17' السكني"
+    tr: "Novocheryomushkinskaya 17 Konut Kompleksi"
+  image: "images/Frame_25.webp"
+  link: "projects/cheryomushki"
+  endYear: 2021
+- id: 6
+  title:
+    ru: "Гостиничный комплекс Mövenpick"
+    en: "Mövenpick Hotel Complex"
+    zh: "瑞享酒店综合体"
+    ar: "مجمع فنادق موفنبيك"
+    tr: "Mövenpick Otel Kompleksi"
+  image: "images/Frame_24.webp"
+  link: "projects/mvenpick"
+  endYear: 2019
+- id: 5
+  title:
+    ru: "Здание Научно- технического центра «Трубной металлургической компании»"
+    en: "Scientific and Technical Center of the Pipe Metallurgical Company"
+    zh: "利佩茨克冶金公司科学和技术中心大楼"
+    ar: "مبنى المركز العلمي والتقني لشركة Pipe Metallurgical"
+    tr: "Boru Metalurji Şirketi Bilim ve Teknik Merkezi Binası"
+  image: "images/Frame_23.webp"
+  link: "projects/tmk"
+  endYear: 2019
+- id: 4
+  title:
+    ru: "«Технопарк» Сколково (здания 3a, 3b, 3c)"
+    en: "Skolkovo Technopark (buildings 3a, 3b, 3c)"
+    zh: "斯科尔科沃科技园（3a, 3b, 3c 栋）"
+    ar: "تكنوبارك سكولكوفو (مباني 3a, 3b, 3c)"
+    tr: "Skolkovo Teknopark (3a, 3b, 3c binaları)"
+  image: "images/Frame_22.webp"
+  link: "projects/technopark"
+  endYear: 2016
+- id: 2
+  title:
+    ru: "Завод ОOO «Сименс Технологии Газовых Турбин»"
+    en: "Siemens Gas Turbine Technologies Factory"
+    zh: "西门子燃气轮机技术工厂"
+    ar: "مصنع سيمنز لتقنيات توربينات الغاز"
+    tr: "Siemens Gaz Türbini Teknolojileri Fabrikası"
+  image: "images/Frame_19.webp"
+  link: "projects/simens"
+  endYear: 2015
+- id: 3
+  title:
+    ru: "Международный аэропорт «Курумоч», 1-я очередь развития."
+    en: "Kurumoch International Airport, Phase 1 development"
+    zh: "库鲁莫奇国际机场一期开发"
+    ar: "مطار كوروموتش الدولي، المرحلة الأولى من التطوير"
+    tr: "Kurumoch Uluslararası Havalimanı, 1. Aşama geliştirme"
+  image: "images/Frame_20.webp"
+  link: "projects/kurumoch"
+  endYear: 2015
+- id: 1
+  title:
+    ru: "Здание второй сцены Государственного академического Мариинского театра"
+    en: "Mariinsky Theatre Second Stage Building"
+    zh: "国立马林斯基剧院二号舞台大楼"
+    ar: "مبنى المسرح الثاني لمسرح ماريانسكي الحكومي"
+    tr: "Devlet Akademik Mariinsky Tiyatrosu İkinci Sahne Binası"
+  image: "images/Frame_18.webp"
+  link: "projects/gamp2"
+  endYear: 2013

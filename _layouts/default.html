@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% assign lang = page.lang | default: "ru" %}
+<html lang="{{ lang }}" {% if lang=='ar' %}dir="rtl" {% endif %}>
+
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    <script src="{{ '/js/header.js' | relative_url }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ '/services/css/service.css' | relative_url }}" />
+{% assign lang = page.lang | default: "ru" %}
+{% assign i18n = site.data.i18n %}
+
+<main>
+    <section class="content">
+        <h1 class="title">{{ page.title }}</h1>
+        <div class="image-list">
+            <img src="{{ page.main_image | relative_url }}">
+        </div>
+        <div class="dropcap-container">
+            <p class="dropcap">{{ page.description }}</p>
+        </div>
+
+        <div class="accordion-container">
+            {% for item in page.accordion %}
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>{{ item.title }}</h3>
+                    <div class="accordion-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <p>{{ item.content | newline_to_br }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="dropcap-container">
+            <p class="dropcap">{{ page.footer_text }}</p>
+        </div>
+
+        {% include contact-form.html %}
+    </section>
+</main>
+
+<script src="{{ '/js/accordion.js' | relative_url }}"></script>
+<style>
+    {
+        % if lang=='ar' %
+    }
+
+    main {
+        direction: rtl;
+    }
+
+    .accordion-header {
+        flex-direction: row-reverse;
+    }
+
+    .accordion-icon {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+        {
+        % endif %
+    }
+</style>

@@ -1,3 +1,27 @@
+{% assign lang = page.lang | default: "ru" %}
+{% assign i18n = site.data.i18n %}
+
+{% comment %}
+Логика для умного переключателя:
+1. Берем текущий URL страницы.
+2. Удаляем префикс языка (/en/, /zh/, /ar/, /tr/), если он есть.
+3. Формируем ссылки для всех языков на ту же самую страницу.
+{% endcomment %}
+
+{% assign current_url = page.url %}
+{% assign base_url_path = current_url %}
+
+{% if lang != "ru" %}
+{% assign lang_prefix = "/" | append: lang | append: "/" %}
+{% assign base_url_path = current_url | replace_first: lang_prefix, "/" %}
+{% endif %}
+
+{% if lang == "ru" %}
+{% assign lang_path = "" %}
+{% else %}
+{% assign lang_path = lang | append: "/" %}
+{% endif %}
+
 <header>
     <div class="menu-toggle">
         <div class="hamburger"></div>
@@ -8,21 +32,32 @@
     <div class="header-left">
         <nav>
             <ul>
-                <li><a href="{{ '/' | relative_url }}#pro">Проекты</a></li>
-                <li><a href="{{ '/' | relative_url }}#usl">Услуги</a></li>
+                <li><a href="{{ '/' | relative_url }}{{ lang_path }}#pro">{{ i18n.nav.projects[lang] }}</a></li>
+                <li><a href="{{ '/' | relative_url }}{{ lang_path }}#usl">{{ i18n.nav.services[lang] }}</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="header-logo">
-        <a href="{{ '/' | relative_url }}"><img class="logo" src="{{ '/images/logo.webp' | relative_url }}" alt="Логотип" /></a>
+        <a href="{{ '/' | relative_url }}{{ lang_path }}"><img class="logo"
+                src="{{ '/images/logo.webp' | relative_url }}" alt="Логотип" /></a>
     </div>
 
     <div class="header-right">
         <nav>
             <ul>
-                <li><a href="{{ '/' | relative_url }}#komp">О компании</a></li>
-                <li><a href="{{ '/' | relative_url }}#kont">Контакты</a></li>
+                <li><a href="{{ '/' | relative_url }}{{ lang_path }}#komp">{{ i18n.nav.about[lang] }}</a></li>
+                <li><a href="{{ '/' | relative_url }}{{ lang_path }}#kont">{{ i18n.nav.contacts[lang] }}</a></li>
+                <li class="lang-selector">
+                    <span class="active-lang">{{ lang | upcase }}</span>
+                    <ul class="lang-dropdown">
+                        <li><a href="{{ base_url_path | relative_url }}">RU</a></li>
+                        <li><a href="{{ '/en' | append: base_url_path | relative_url }}">EN</a></li>
+                        <li><a href="{{ '/zh' | append: base_url_path | relative_url }}">ZH</a></li>
+                        <li><a href="{{ '/ar' | append: base_url_path | relative_url }}">AR</a></li>
+                        <li><a href="{{ '/tr' | append: base_url_path | relative_url }}">TR</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
@@ -31,10 +66,70 @@
 <div class="mobile-menu">
     <nav>
         <ul>
-            <li><a href="{{ '/' | relative_url }}#pro">Проекты</a></li>
-            <li><a href="{{ '/' | relative_url }}#usl">Услуги</a></li>
-            <li><a href="{{ '/' | relative_url }}#komp">О компании</a></li>
-            <li><a href="{{ '/' | relative_url }}#kont">Контакты</a></li>
+            <li><a href="{{ '/' | relative_url }}{{ lang_path }}#pro">{{ i18n.nav.projects[lang] }}</a></li>
+            <li><a href="{{ '/' | relative_url }}{{ lang_path }}#usl">{{ i18n.nav.services[lang] }}</a></li>
+            <li><a href="{{ '/' | relative_url }}{{ lang_path }}#komp">{{ i18n.nav.about[lang] }}</a></li>
+            <li><a href="{{ '/' | relative_url }}{{ lang_path }}#kont">{{ i18n.nav.contacts[lang] }}</a></li>
+            <li class="lang-selector-mobile">
+                <a href="{{ base_url_path | relative_url }}">RU</a> |
+                <a href="{{ '/en' | append: base_url_path | relative_url }}">EN</a> |
+                <a href="{{ '/zh' | append: base_url_path | relative_url }}">ZH</a> |
+                <a href="{{ '/ar' | append: base_url_path | relative_url }}">AR</a> |
+                <a href="{{ '/tr' | append: base_url_path | relative_url }}">TR</a>
+            </li>
         </ul>
     </nav>
 </div>
+
+<style>
+    .lang-selector {
+        position: relative;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    .lang-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        padding: 10px 0;
+        min-width: 60px;
+        z-index: 1000;
+    }
+
+    .lang-selector:hover .lang-dropdown {
+        display: block;
+    }
+
+    .lang-dropdown li a {
+        padding: 5px 15px;
+        display: block;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .lang-dropdown li a:hover {
+        background: #f5f5f5;
+    }
+
+    .active-lang {
+        font-weight: bold;
+        border-bottom: 2px solid #2c3e50;
+    }
+
+    .lang-selector-mobile {
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    .lang-selector-mobile a {
+        display: inline !important;
+        padding: 0 5px !important;
+        color: white !important;
+    }
+</style>

@@ -1,4 +1,5 @@
 ---
+lang: tr
 layout: project
 title: "Novocheryomushkinskaya 17 Konut Kompleksi"
 years: "2019-2021"

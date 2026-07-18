@@ -1,4 +1,5 @@
 ---
+lang: zh
 layout: project
 title: "新切廖穆什基大街 17 号住宅区"
 years: "2019-2021"

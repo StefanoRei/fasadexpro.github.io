@@ -76,6 +76,15 @@ main {
     padding-right: 30px; /* Увеличьте отступ справа для текста */
 }
 
+.full-width-extended-text {
+    padding: 1rem 30px;
+    text-align: left;
+}
+
+.full-width-extended-text p {
+    margin-bottom: 1em;
+}
+
 .image-content {
     flex: 1;
     position: relative;

@@ -1,4 +1,5 @@
 ---
+lang: en
 layout: project
 optimize_images: false
 title: "Management Apparatus Building of PC 'Sheskharis'"

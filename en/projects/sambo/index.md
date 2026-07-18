@@ -1,4 +1,5 @@
 ---
+lang: en
 layout: project
 optimize_images: false
 title: "International Sambo Center and Boxing Center at Luzhniki Olympic Complex"

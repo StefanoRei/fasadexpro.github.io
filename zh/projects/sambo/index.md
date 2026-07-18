@@ -1,4 +1,5 @@
 ---
+lang: zh
 layout: project
 optimize_images: false
 title: "国际桑博中心和卢日尼基奥林匹克综合体拳击中心"

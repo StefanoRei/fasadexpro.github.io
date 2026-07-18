@@ -3,7 +3,7 @@ import re
 
 languages = ['en', 'zh', 'ar', 'tr']
 base_dirs = ['projects', 'services']
-root_path = '/home/stefano/Documents/fasadexpro.github.io'
+root_path = os.path.dirname(os.path.abspath(__file__))
 
 def process_file(file_path, lang):
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -45,7 +45,11 @@ for lang in languages:
                 for filename in ['index.md', 'index.html']:
                     src_file = os.path.join(src_dir, filename)
                     if os.path.exists(src_file):
+                        dest_file = os.path.join(dest_dir, filename)
+                        if os.path.exists(dest_file):
+                            # Skip overwriting translated file
+                            continue
                         new_content = process_file(src_file, lang)
-                        with open(os.path.join(dest_dir, filename), 'w', encoding='utf-8') as f:
+                        with open(dest_file, 'w', encoding='utf-8') as f:
                             f.write(new_content)
                         print(f"Created {lang}/{base}/{item}/{filename}")

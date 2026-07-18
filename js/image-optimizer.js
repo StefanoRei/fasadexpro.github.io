@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (noOptimize) {
             img.setAttribute('src', `${basePath}/${imgName}`);
+            img.setAttribute('data-large-src', `${basePath}/${imgName}`);
             return;
         }
 

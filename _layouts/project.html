@@ -106,10 +106,7 @@ layout: default
         transform: none;
     }
 
-        {
-        % if lang=='ar' %
-    }
-
+    {% if lang == 'ar' %}
     .custom-table {
         direction: rtl;
     }
@@ -117,8 +114,5 @@ layout: default
     .table-cell {
         text-align: right;
     }
-
-        {
-        % endif %
-    }
+    {% endif %}
 </style>

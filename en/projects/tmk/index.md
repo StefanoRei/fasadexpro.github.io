@@ -1,4 +1,5 @@
 ---
+lang: en
 layout: project
 optimize_images: false
 title: "Scientific and Technical Center of the Pipe Metallurgical Company"

@@ -1,4 +1,5 @@
 ---
+lang: zh
 layout: project
 optimize_images: false
 title: "管冶金公司科学技术中心大楼"

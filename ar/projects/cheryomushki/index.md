@@ -1,4 +1,5 @@
 ---
+lang: ar
 layout: project
 dir: rtl
 title: "مجمع 'Novocheryomushkinskaya 17' السكني"

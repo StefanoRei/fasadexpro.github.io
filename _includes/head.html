@@ -62,35 +62,23 @@
         transform: translateX(0);
     }
 
-        {
-        % if lang=='ar' %
-    }
-
+    {% if lang == 'ar' %}
     .vacancy-btn .arrow {
         margin-left: 0;
         margin-right: 12px;
         transform: scaleX(-1);
     }
-
-        {
-        % endif %
-    }
+    {% endif %}
 
     .vacancy-btn:hover .arrow {
         transform: translateX(5px);
     }
 
-        {
-        % if lang=='ar' %
-    }
-
+    {% if lang == 'ar' %}
     .vacancy-btn:hover .arrow {
         transform: translateX(-5px) scaleX(-1);
     }
-
-        {
-        % endif %
-    }
+    {% endif %}
 
     /* Новые стили для текста между заголовком и проектами */
     .projects-intro {

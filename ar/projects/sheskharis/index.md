@@ -1,4 +1,5 @@
 ---
+lang: ar
 layout: project
 optimize_images: false
 dir: rtl

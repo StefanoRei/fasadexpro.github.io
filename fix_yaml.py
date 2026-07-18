@@ -44,7 +44,7 @@ def fix_file(filepath):
         f.writelines(new_lines)
     print(f"Fixed {filepath}")
 
-root_dir = '/home/stefano/Documents/fasadexpro.github.io'
+root_dir = os.path.dirname(os.path.abspath(__file__))
 
 for root, dirs, files in os.walk(root_dir):
     if 'services' in root:

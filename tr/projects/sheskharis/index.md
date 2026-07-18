@@ -1,4 +1,5 @@
 ---
+lang: tr
 layout: project
 optimize_images: false
 title: "PC 'Sheskharis' Yönetim Binası"

@@ -1,4 +1,5 @@
 ---
+lang: tr
 layout: project
 optimize_images: false
 title: "Luzhniki Olimpiyat Kompleksi'ndeki Uluslararası Sambo Merkezi ve Boks Merkezi"

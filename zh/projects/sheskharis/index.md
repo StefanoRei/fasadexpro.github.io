@@ -1,4 +1,5 @@
 ---
+lang: zh
 layout: project
 optimize_images: false
 title: "“Sheskharis” PC 管理机构大楼"
